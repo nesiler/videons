@@ -1,13 +1,12 @@
-using VideoApp.Core.DataAccess.EntityFramework;
-using VideoApp.DataAccess.Abstract;
-using VideoApp.Entities.Concrete;
+using Videons.Core.DataAccess.EntityFramework;
+using Videons.DataAccess.Abstract;
+using Videons.Entities.Concrete;
 
-namespace VideoApp.DataAccess.Concrete.EntityFramework
+namespace Videons.DataAccess.Concrete.EntityFramework;
+
+public class EfChannelDal : EfEntityRepositoryBase<Channel, VideoAppContext>, IChannelDal
 {
-    public class EfChannelDal : EfEntityRepositoryBase<Channel, VideoAppContext>, IChannelDal
+    public EfChannelDal(VideoAppContext context) : base(context)
     {
-        public EfChannelDal(VideoAppContext context) : base(context)
-        {
-        }
     }
 }

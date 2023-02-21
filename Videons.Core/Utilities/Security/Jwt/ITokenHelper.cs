@@ -1,10 +1,8 @@
-using System.Collections.Generic;
-using VideoApp.Core.Entities.Concrete;
+using Videons.Core.Entities.Concrete;
 
-namespace VideoApp.Core.Utilities.Security.Jwt
+namespace Videons.Core.Utilities.Security.Jwt;
+
+public interface ITokenHelper
 {
-    public interface ITokenHelper
-    {
-        AccessToken CreateToken(User user, List<OperationClaim> operationClaims);
-    }
+    AccessToken CreateToken(User user, List<OperationClaim> operationClaims);
 }

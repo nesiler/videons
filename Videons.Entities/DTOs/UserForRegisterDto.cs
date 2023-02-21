@@ -1,12 +1,11 @@
 using Videons.Core.Entities.Concrete;
 
-namespace VideoApp.Entities.DTOs
+namespace Videons.Entities.DTOs;
+
+public class UserForRegisterDto : IDto
 {
-    public class UserForRegisterDto : IDto
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-    }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
 }

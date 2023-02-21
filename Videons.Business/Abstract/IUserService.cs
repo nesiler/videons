@@ -1,17 +1,14 @@
-using System;
-using System.Collections.Generic;
-using VideoApp.Core.Entities.Concrete;
-using VideoApp.Core.Utilities.Results;
-using VideoApp.Entities.DTOs;
+using Videons.Core.Entities.Concrete;
+using Videons.Core.Utilities.Results;
+using Videons.Entities.DTOs;
 
-namespace VideoApp.Business.Abstract
+namespace Videons.Business.Abstract;
+
+public interface IUserService
 {
-    public interface IUserService
-    {
-        User GetById(Guid id);
-        User GetByEmail(string email);
-        IResult Add(User user);
-        List<OperationClaim> GetClaims(User user);
-        IResult ChangePassword(Guid userId, ChangePasswordDto changePasswordDto);
-    }
+    User GetById(Guid id);
+    User GetByEmail(string email);
+    IResult Add(User user);
+    List<OperationClaim> GetClaims(User user);
+    IResult ChangePassword(Guid userId, ChangePasswordDto changePasswordDto);
 }

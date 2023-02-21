@@ -1,9 +1,8 @@
 using Videons.Core.Entities;
 
-namespace Videons.Entities.DTOs
+namespace Videons.Entities.DTOs;
+
+public class CategoryDto : DtoBase
 {
-    public class CategoryDto : DtoBase
-    {
-        public string Name { get; set; }
-    }
+    public string Name { get; set; }
 }

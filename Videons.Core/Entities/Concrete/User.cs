@@ -1,6 +1,6 @@
 namespace Videons.Core.Entities.Concrete;
 
-public class User:EntityBase
+public class User : EntityBase
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -8,5 +8,4 @@ public class User:EntityBase
     public byte[] PasswordSalt { get; set; }
     public byte[] PasswordHash { get; set; }
     public bool Status { get; set; }
-    
 }

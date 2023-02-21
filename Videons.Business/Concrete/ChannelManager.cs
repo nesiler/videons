@@ -1,82 +1,70 @@
-using System;
-using System.Collections.Generic;
-using VideoApp.Business.Abstract;
-using VideoApp.Core.Utilities.Results;
-using VideoApp.DataAccess.Abstract;
-using VideoApp.Entities.Concrete;
-using VideoApp.Entities.DTOs;
+using Videons.Business.Abstract;
+using Videons.Core.Utilities.Results;
+using Videons.DataAccess.Abstract;
+using Videons.Entities.Concrete;
+using Videons.Entities.DTOs;
 
-namespace VideoApp.Business.Concrete
+namespace Videons.Business.Concrete;
+
+public class ChannelManager : IChannelService
 {
-    public class ChannelManager : IChannelService
+    private readonly IChannelDal _channelDal;
+    private readonly IUserService _userService;
+
+    public ChannelManager(IChannelDal channelDal, IUserService userService)
     {
-        private readonly IUserService _userService;
-        private readonly IChannelDal _channelDal;
+        _channelDal = channelDal;
+        _userService = userService;
+    }
 
-        public ChannelManager(IChannelDal channelDal, IUserService userService)
+    public IResult Add(ChannelDto channelDto)
+    {
+        var userExist = _userService.GetById(channelDto.UserId);
+        if (userExist == null) return new ErrorResult("Invalid user");
+
+        var channel = new Channel
         {
-            _channelDal = channelDal;
-            _userService = userService;
-        }
+            Name = channelDto.Name,
+            Verified = false,
+            UserId = channelDto.UserId
+        };
 
-        public IDataResult<IList<Channel>> GetList()
-        {
-            var channels = _channelDal.GetList();
-            return new SuccessDataResult<IList<Channel>>(channels);
-        }
+        if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");
 
-        public Channel GetById(Guid channelId)
-        {
-            return _channelDal.Get(c => c.Id == channelId);
-        }
+        channel.Slug = channel.Id.ToString();
+        _channelDal.Update(channel);
 
-        public Channel GetBySlug(string slug)
-        {
-            return _channelDal.Get(c => c.Slug == slug);
-        }
+        return new SuccessResult("Channel created.");
+    }
 
-        public IResult Add(ChannelDto channelDto)
-        {
-            var userExist = _userService.GetById(channelDto.UserId);
-            if (userExist == null)
-            {
-                return new ErrorResult("Invalid user");
-            }
+    public IResult Update(Guid id, ChannelUpdateDto channelUpdateDto)
+    {
+        var channel = GetById(id);
 
-            var channel = new Channel
-            {
-                Name = channelDto.Name,
-                Verified = false,
-                UserId = channelDto.UserId
-            };
+        if (channel == null) return new ErrorResult("Channel cannot found!");
 
-            if (!_channelDal.Add(channel))
-            {
-                return new ErrorResult("Channel cannot created!");
-            }
+        channel.Name = channelUpdateDto.Name;
+        channel.Slug = channelUpdateDto.Slug;
+        channel.ImagePath = channelUpdateDto.ImagePath;
 
-            channel.Slug = channel.Id.ToString();
-            _channelDal.Update(channel);
+        return _channelDal.Update(channel)
+            ? new SuccessResult("Channel updated.")
+            : new ErrorResult("Channel cannot updated!");
+    }
 
-            return new SuccessResult("Channel created.");
-        }
+    public IDataResult<IList<Channel>> GetList()
+    {
+        var channels = _channelDal.GetList();
+        return new SuccessDataResult<IList<Channel>>(channels);
+    }
 
-        public IResult Update(Guid id, ChannelUpdateDto channelUpdateDto)
-        {
-            var channel = GetById(id);
+    public Channel GetById(Guid channelId)
+    {
+        return _channelDal.Get(c => c.Id == channelId);
+    }
 
-            if (channel == null)
-            {
-                return new ErrorResult("Channel cannot found!");
-            }
-
-            channel.Name = channelUpdateDto.Name;
-            channel.Slug = channelUpdateDto.Slug;
-            channel.ImagePath = channelUpdateDto.ImagePath;
-
-            return _channelDal.Update(channel)
-                ? new SuccessResult("Channel updated.")
-                : new ErrorResult("Channel cannot updated!");
-        }
+    public Channel GetBySlug(string slug)
+    {
+        return _channelDal.Get(c => c.Slug == slug);
     }
 }

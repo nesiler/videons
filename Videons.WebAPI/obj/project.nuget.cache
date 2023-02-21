@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "pu7/tB5Ko+LxLC9pdswCZtpsD4FOGoGw6AN0igTi/V2TozU95Gw9ovVYdgK46yn/0gHo/D6hDxSOeNjvEdVOMQ==",
+  "dgSpecHash": "wvGOd4L75zkEuVQfjWIQnEaKgXyLC6lNXBEuHrWq+06+achQzURoz51m2AsCH4u235K++Q2qC3ovQgnPDawQPA==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/Videons.WebAPI.csproj",
   "expectedPackageFiles": [
+    "/Users/enesdiler/.nuget/packages/autofac/6.5.0/autofac.6.5.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/autofac.extensions.dependencyinjection/8.0.0/autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/identitymodel/6.1.0-preview.2/identitymodel.6.1.0-preview.2.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.entityframeworkcore/7.0.3/microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.3/microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.3/microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
@@ -18,6 +23,12 @@
     "/Users/enesdiler/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.identitymodel.abstractions/6.27.0/microsoft.identitymodel.abstractions.6.27.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.27.0/microsoft.identitymodel.jsonwebtokens.6.27.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.identitymodel.logging/6.27.0/microsoft.identitymodel.logging.6.27.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.identitymodel.tokens/6.27.0/microsoft.identitymodel.tokens.6.27.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/npgsql/7.0.2/npgsql.7.0.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.3/npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
@@ -25,7 +36,14 @@
     "/Users/enesdiler/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-    "/Users/enesdiler/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/Users/enesdiler/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.identitymodel.tokens.jwt/6.27.0/system.identitymodel.tokens.jwt.6.27.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []
 }

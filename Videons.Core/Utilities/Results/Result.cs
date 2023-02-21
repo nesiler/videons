@@ -1,18 +1,17 @@
-namespace VideoApp.Core.Utilities.Results
-{
-    public class Result : IResult
-    {
-        public bool Success { get; }
-        public string Message { get; }
+namespace Videons.Core.Utilities.Results;
 
-        public Result(bool success, string message) : this(success)
-        {
-            Message = message;
-        }
-        
-        public Result(bool success)
-        {
-            Success = success;
-        }
+public class Result : IResult
+{
+    public Result(bool success, string message) : this(success)
+    {
+        Message = message;
     }
+
+    public Result(bool success)
+    {
+        Success = success;
+    }
+
+    public bool Success { get; }
+    public string Message { get; }
 }

@@ -1,17 +1,14 @@
-using System;
-using System.Collections.Generic;
-using VideoApp.Core.Utilities.Results;
-using VideoApp.Entities.Concrete;
-using VideoApp.Entities.DTOs;
+using Videons.Core.Utilities.Results;
+using Videons.Entities.Concrete;
+using Videons.Entities.DTOs;
 
-namespace VideoApp.Business.Abstract
+namespace Videons.Business.Abstract;
+
+public interface IChannelService
 {
-    public interface IChannelService
-    {
-        IDataResult<IList<Channel>> GetList();
-        Channel GetById(Guid channelId);
-        Channel GetBySlug(string slug);
-        IResult Add(ChannelDto channelDto);
-        IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
-    }
+    IDataResult<IList<Channel>> GetList();
+    Channel GetById(Guid channelId);
+    Channel GetBySlug(string slug);
+    IResult Add(ChannelDto channelDto);
+    IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
 }

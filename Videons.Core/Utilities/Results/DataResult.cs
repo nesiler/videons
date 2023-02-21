@@ -1,17 +1,16 @@
-namespace VideoApp.Core.Utilities.Results
+namespace Videons.Core.Utilities.Results;
+
+public class DataResult<T> : Result, IDataResult<T>
 {
-    public class DataResult<T> : Result, IDataResult<T>
+    public DataResult(T data, bool success, string message) : base(success, message)
     {
-        public T Data { get; }
-
-        public DataResult(T data, bool success, string message) : base(success, message)
-        {
-            Data = data;
-        }
-
-        public DataResult(T data, bool success) : base(success)
-        {
-            Data = data;
-        }
+        Data = data;
     }
+
+    public DataResult(T data, bool success) : base(success)
+    {
+        Data = data;
+    }
+
+    public T Data { get; }
 }

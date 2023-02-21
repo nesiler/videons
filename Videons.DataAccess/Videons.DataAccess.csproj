@@ -7,8 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
-      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Videons.Core\Videons.Core.csproj"/>
+        <ProjectReference Include="..\Videons.Entities\Videons.Entities.csproj"/>
     </ItemGroup>
 
 </Project>

@@ -1,18 +1,17 @@
 using AutoMapper;
-using VideoApp.Core.Entities.Concrete;
-using VideoApp.Entities.Concrete;
-using VideoApp.Entities.DTOs;
+using Videons.Core.Entities.Concrete;
+using Videons.Entities.Concrete;
+using Videons.Entities.DTOs;
 
-namespace VideoApp.Business.AutoMapper
+namespace Videons.Business.AutoMapper;
+
+public class AutoMapperProfile : Profile
 {
-    public class AutoMapperProfile : Profile
+    public AutoMapperProfile()
     {
-        public AutoMapperProfile()
-        {
-            CreateMap<Category, CategoryDto>();
-            CreateMap<CategoryCreateUpdateDto, Category>();
+        CreateMap<Category, CategoryDto>();
+        CreateMap<CategoryCreateUpdateDto, Category>();
 
-            CreateMap<User, CurrentUserDto>();
-        }
+        CreateMap<User, CurrentUserDto>();
     }
 }

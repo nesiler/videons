@@ -1,6 +1,6 @@
 namespace Videons.Core.Entities.Concrete;
 
-public class OperationClaim
+public class OperationClaim : EntityBase
 {
     public string Name { get; set; }
 }

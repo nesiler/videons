@@ -1,9 +1,8 @@
-using VideoApp.Core.DataAccess;
-using VideoApp.Entities.Concrete;
+using Videons.Core.DataAccess;
+using Videons.Entities.Concrete;
 
-namespace VideoApp.DataAccess.Abstract
+namespace Videons.DataAccess.Abstract;
+
+public interface IChannelDal : IEntityRepository<Channel>
 {
-    public interface IChannelDal : IEntityRepository<Channel>
-    {
-    }
 }

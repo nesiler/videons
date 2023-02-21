@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-using VideoApp.Core.DataAccess;
-using VideoApp.Core.Entities.Concrete;
+using Videons.Core.DataAccess;
+using Videons.Core.Entities.Concrete;
 
-namespace VideoApp.DataAccess.Abstract
+namespace Videons.DataAccess.Abstract;
+
+public interface IUserDal : IEntityRepository<User>
 {
-    public interface IUserDal : IEntityRepository<User>
-    {
-        List<OperationClaim> GetClaims(User user);
-    }
+    List<OperationClaim> GetClaims(User user);
 }

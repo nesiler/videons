@@ -1,10 +1,9 @@
 using Videons.Core.Entities.Concrete;
 
-namespace VideoApp.Entities.DTOs
+namespace Videons.Entities.DTOs;
+
+public class ChannelDto : IDto
 {
-    public class ChannelDto : IDto
-    {
-        public string Name { get; set; }
-        public Guid UserId { get; set; }
-    }
+    public string Name { get; set; }
+    public Guid UserId { get; set; }
 }
