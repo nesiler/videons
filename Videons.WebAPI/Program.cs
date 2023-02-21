@@ -1,25 +1,144 @@
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-using Videons.Business.DependencyResolvers.Autofac;
+using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Videons.Business.AutoMapper;
+using Videons.Core.Utilities.Security.Encryption;
+using Videons.Core.Utilities.Security.Jwt;
+using Videons.DataAccess.Concrete.EntityFramework;
 
-namespace Videons.WebAPI
-{
-    public class Program
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// builder.Services.AddDbContext<VideonsContext>();
+
+var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        public static void Main(string[] args)
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidIssuer = tokenOptions.Issuer,
+            ValidAudience = tokenOptions.Audience,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
+        };
+    });
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .UseServiceProviderFactory(new AutofacServiceProviderFactory())
-                .ConfigureContainer<ContainerBuilder>(builder =>
+//add swagger with JWT
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Videons.WebAPI", Version = "v1" });
+
+    var jwtSecurityScheme = new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authentication header. Example value: Bearer token",
+        Reference = new OpenApiReference
+        {
+            Id = JwtBearerDefaults.AuthenticationScheme,
+            Type = ReferenceType.SecurityScheme
+        }
+    };
+
+    c.AddSecurityDefinition(jwtSecurityScheme.Reference.Id, jwtSecurityScheme);
+
+    c.OperationFilter<AuthorizationOperationFilter>();
+});
+
+//Dbcontext and connection string
+builder.Services.AddDbContext<VideonsContext>(options =>
+{
+    var connectionStr = builder.Configuration.GetConnectionString("Videons");
+    options.UseNpgsql(connectionStr);
+});
+
+// Auto Mapper Configurations
+var mappingConfig = new MapperConfiguration(mc => { mc.AddProfile(new AutoMapperProfile()); });
+var mapper = mappingConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
+
+
+builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+// app.MapControllers();
+
+app.Run();
+
+internal class AuthorizationOperationFilter : IOperationFilter
+{
+    public void Apply(OpenApiOperation operation, OperationFilterContext context)
+    {
+        var actionMetadata = context.ApiDescription.ActionDescriptor.EndpointMetadata;
+        var isAuthorized = actionMetadata.Any(metadataItem => metadataItem is AuthorizeAttribute);
+        var allowAnonymous = actionMetadata.Any(metadataItem => metadataItem is AllowAnonymousAttribute);
+
+        if (!isAuthorized || allowAnonymous) return;
+
+        operation.Parameters ??= new List<OpenApiParameter>();
+
+        operation.Security = new List<OpenApiSecurityRequirement>();
+
+        // Add JWT bearer type
+        operation.Security.Add(new OpenApiSecurityRequirement
+            {
                 {
-                    builder.RegisterModule(new AutofacBusinessModule());
-                })
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            // Definition name. 
+                            // Should exactly match the one given in the service configuration
+                            Id = JwtBearerDefaults.AuthenticationScheme,
+                            Type = ReferenceType.SecurityScheme
+                        }
+                    },
+                    Array.Empty<string>()
+                }
+            }
+        );
     }
 }
+
+
+////////////////////////////
+
+// var startup = new Startup(builder.Configuration); // My custom startup class.
+//
+// startup.ConfigureServices(builder.Services); // Add services to the container.
+//
+// var app = builder.Build();
+//
+// startup.Configure(app, app.Environment); // Configure the HTTP request pipeline.
+//
+// app.Run();

@@ -4,9 +4,9 @@ using Videons.DataAccess.Abstract;
 
 namespace Videons.DataAccess.Concrete.EntityFramework;
 
-public class EfUserDal : EfEntityRepositoryBase<User, VideoAppContext>, IUserDal
+public class EfUserDal : EfEntityRepositoryBase<User, VideonsContext>, IUserDal
 {
-    public EfUserDal(VideoAppContext context) : base(context)
+    public EfUserDal(VideonsContext context) : base(context)
     {
     }
 

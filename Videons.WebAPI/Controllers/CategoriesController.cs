@@ -1,52 +1,50 @@
-using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Videons.Business.Abstract;
 using Videons.Entities.DTOs;
 
-namespace Videons.WebAPI.Controllers
+namespace Videons.WebAPI.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CategoriesController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class CategoriesController : ControllerBase
+    private readonly ICategoryService _categoryService;
+
+    public CategoriesController(ICategoryService categoryService)
     {
-        private readonly ICategoryService _categoryService;
+        _categoryService = categoryService;
+    }
 
-        public CategoriesController(ICategoryService categoryService)
-        {
-            _categoryService = categoryService;
-        }
+    [HttpGet]
+    public IActionResult GetList()
+    {
+        var result = _categoryService.GetList();
 
-        [HttpGet]
-        public IActionResult GetList()
-        {
-            var result = _categoryService.GetList();
+        return result.Success
+            ? Ok(result.Data)
+            : BadRequest(result.Message);
+    }
 
-            return result.Success
-                ? Ok(result.Data)
-                : BadRequest(result.Message);
-        }
+    [HttpPost]
+    // [Authorize(Roles = "Category.Add")]
+    public IActionResult Add([FromBody] CategoryCreateUpdateDto categoryDto)
+    {
+        var result = _categoryService.Add(categoryDto);
 
-        [HttpPost]
-        // [Authorize(Roles = "Category.Add")]
-        public IActionResult Add([FromBody] CategoryCreateUpdateDto categoryDto)
-        {
-            var result = _categoryService.Add(categoryDto);
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
 
-            return result.Success
-                ? Ok(result.Message)
-                : BadRequest(result.Message);
-        }
+    [HttpPut("{id}")]
+    [Authorize(Roles = "Category.Update")]
+    public IActionResult Update(Guid id, [FromBody] CategoryCreateUpdateDto categoryDto)
+    {
+        var result = _categoryService.Update(id, categoryDto);
 
-        [HttpPut("{id}")]
-        [Authorize(Roles = "Category.Update")]
-        public IActionResult Update(Guid id, [FromBody] CategoryCreateUpdateDto categoryDto)
-        {
-            var result = _categoryService.Update(id, categoryDto);
-
-            return result.Success
-                ? Ok(result.Message)
-                : BadRequest(result.Message);
-        }
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
     }
 }

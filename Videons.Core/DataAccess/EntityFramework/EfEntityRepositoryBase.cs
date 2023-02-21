@@ -1,6 +1,5 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Videons.Core.DataAccess;
 using Videons.Core.Entities;
 
 namespace Videons.Core.DataAccess.EntityFramework;

@@ -4,9 +4,9 @@ using Videons.Entities.Concrete;
 
 namespace Videons.DataAccess.Concrete.EntityFramework;
 
-public class EfCategoryDal : EfEntityRepositoryBase<Category, VideoAppContext>, ICategoryDal
+public class EfCategoryDal : EfEntityRepositoryBase<Category, VideonsContext>, ICategoryDal
 {
-    public EfCategoryDal(VideoAppContext context) : base(context)
+    public EfCategoryDal(VideonsContext context) : base(context)
     {
     }
 }

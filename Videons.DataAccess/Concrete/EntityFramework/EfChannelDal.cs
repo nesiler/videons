@@ -4,9 +4,9 @@ using Videons.Entities.Concrete;
 
 namespace Videons.DataAccess.Concrete.EntityFramework;
 
-public class EfChannelDal : EfEntityRepositoryBase<Channel, VideoAppContext>, IChannelDal
+public class EfChannelDal : EfEntityRepositoryBase<Channel, VideonsContext>, IChannelDal
 {
-    public EfChannelDal(VideoAppContext context) : base(context)
+    public EfChannelDal(VideonsContext context) : base(context)
     {
     }
 }

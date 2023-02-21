@@ -4,9 +4,9 @@ using Videons.Entities.Concrete;
 
 namespace Videons.DataAccess.Concrete.EntityFramework;
 
-public class VideoAppContext : DbContext
+public class VideonsContext : DbContext
 {
-    public VideoAppContext(DbContextOptions<VideoAppContext> options) : base(options)
+    public VideonsContext(DbContextOptions<VideonsContext> options) : base(options)
     {
     }
 
