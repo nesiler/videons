@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-// using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,24 +36,24 @@ namespace Videons.WebAPI
 
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
-            // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //     .AddJwtBearer(options =>
-            //     {
-            //         options.TokenValidationParameters = new TokenValidationParameters
-            //         {
-            //             ValidateIssuer = true,
-            //             ValidateAudience = true,
-            //             ValidateLifetime = true,
-            //             ValidIssuer = tokenOptions.Issuer,
-            //             ValidAudience = tokenOptions.Audience,
-            //             ValidateIssuerSigningKey = true,
-            //             IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
-            //         };
-            //     });
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidIssuer = tokenOptions.Issuer,
+                        ValidAudience = tokenOptions.Audience,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
+                    };
+                });
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "VideoApp.WebAPI", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "Videons.WebAPI", Version = "v1"});
 
                 var jwtSecurityScheme = new OpenApiSecurityScheme
                 {
@@ -77,7 +77,7 @@ namespace Videons.WebAPI
 
             services.AddDbContext<VideoAppContext>(options =>
             {
-                var connectionStr = Configuration.GetConnectionString("VideoApp");
+                var connectionStr = Configuration.GetConnectionString("Videons");
                 options.UseNpgsql(connectionStr);
             });
             
@@ -96,7 +96,7 @@ namespace Videons.WebAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "VideoApp.WebAPI v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Videons.WebAPI v1"));
             }
 
             app.UseHttpsRedirection();
