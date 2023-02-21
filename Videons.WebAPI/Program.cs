@@ -1,21 +1,34 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Videons.Business.Abstract;
 using Videons.Business.AutoMapper;
+using Videons.Business.Concrete;
+using Videons.Business.DependencyResolvers.Autofac;
 using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
 using Videons.DataAccess.Concrete.EntityFramework;
+using Videons.WebAPI;
+using Videons.WebAPI.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// builder.Host.UseServiceProviderFactory<>(new AutofacBusinessModule());
 builder.Services.AddControllers();
-// builder.Services.AddDbContext<VideonsContext>();
+builder.Configuration.Dispose();
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(builder => { builder.RegisterModule(new AutofacBusinessModule()); });
+
 
 var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -86,6 +99,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
 app.UseAuthentication();
 
 app.UseAuthorization();
@@ -100,9 +115,10 @@ internal class AuthorizationOperationFilter : IOperationFilter
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
         var actionMetadata = context.ApiDescription.ActionDescriptor.EndpointMetadata;
-        var isAuthorized = actionMetadata.Any(metadataItem => metadataItem is AuthorizeAttribute);
-        var allowAnonymous = actionMetadata.Any(metadataItem => metadataItem is AllowAnonymousAttribute);
-
+        // var isAuthorized = actionMetadata.Any(metadataItem => metadataItem is AuthorizeAttribute);
+        // var allowAnonymous = actionMetadata.Any(metadataItem => metadataItem is AllowAnonymousAttribute);
+        var isAuthorized = true;
+        var allowAnonymous = false;
         if (!isAuthorized || allowAnonymous) return;
 
         operation.Parameters ??= new List<OpenApiParameter>();

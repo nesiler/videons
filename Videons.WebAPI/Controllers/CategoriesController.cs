@@ -9,7 +9,7 @@ namespace Videons.WebAPI.Controllers;
 [Route("api/[controller]")]
 public class CategoriesController : ControllerBase
 {
-    private readonly ICategoryService _categoryService;
+    public ICategoryService _categoryService;
 
     public CategoriesController(ICategoryService categoryService)
     {

@@ -16,6 +16,13 @@ public class JwtHelper : ITokenHelper
     public JwtHelper(IConfiguration configuration)
     {
         Configuration = configuration;
+        
+        // This is the old way of getting the TokenOptions from appsettings.json
+        // _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+        
+        // This is the new way of getting the TokenOptions from appsettings.json
+        _tokenOptions = Configuration.GetSection("TokenOptions").GetSection();
+
 
         // var tokenOptionsSection = Configuration.GetSection("TokenOptions");
         // _tokenOptions = new TokenOptions();
