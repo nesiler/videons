@@ -1,9 +1,9 @@
 # Videons - Video API
 
-Youtube like video sharing platform clone using .NET, Entity Framework, PostgreSQL.
+Youtube like video sharing platform clone using .NET 6, Entity Framework, PostgreSQL.
 
-This is the backend repository
-## Packages
+This is just backend repository.
+## Used Packages
 1. Entity Framework - ORM
 2. PostgreSQL - Database 
 3. JWTBearer - Authentication 
@@ -39,4 +39,5 @@ You can authorize the api using the token and the authentication method. Like as
 
 ![](ss/auth.png)
 
-
+---
+Original repo:[Youtube Clone](https://github.com/mucahitnezir/youtube-clone)
