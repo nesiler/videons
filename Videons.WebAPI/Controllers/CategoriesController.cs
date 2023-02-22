@@ -38,7 +38,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = "Category.Update")]
+    //[Authorize(Roles = "Category.Update")]
     public IActionResult Update(Guid id, [FromBody] CategoryCreateUpdateDto categoryDto)
     {
         var result = _categoryService.Update(id, categoryDto);
