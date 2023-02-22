@@ -15,23 +15,23 @@ using Videons.Business.DependencyResolvers.Autofac;
 using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
 using Videons.DataAccess.Concrete.EntityFramework;
-using Videons.WebAPI;
-using Videons.WebAPI.Controllers;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// builder.Host.UseServiceProviderFactory<>(new AutofacBusinessModule());
 builder.Services.AddControllers();
 builder.Configuration.Dispose();
 
+//add autofac container builder
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
     .ConfigureContainer<ContainerBuilder>(builder => { builder.RegisterModule(new AutofacBusinessModule()); });
 
-
+//get token options from appsettings.json
 var tokenOptions = builder.Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
+//add JWT authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -84,9 +84,7 @@ var mappingConfig = new MapperConfiguration(mc => { mc.AddProfile(new AutoMapper
 var mapper = mappingConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 
-
 builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -106,7 +104,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-// app.MapControllers();
 
 app.Run();
 
@@ -145,16 +142,3 @@ internal class AuthorizationOperationFilter : IOperationFilter
         );
     }
 }
-
-
-////////////////////////////
-
-// var startup = new Startup(builder.Configuration); // My custom startup class.
-//
-// startup.ConfigureServices(builder.Services); // Add services to the container.
-//
-// var app = builder.Build();
-//
-// startup.Configure(app, app.Environment); // Configure the HTTP request pipeline.
-//
-// app.Run();

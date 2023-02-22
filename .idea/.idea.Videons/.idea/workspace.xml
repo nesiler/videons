@@ -10,29 +10,43 @@
   <component name="ChangeListManager">
     <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/JwtHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/JwtHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/CategoriesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Migrations/20230221115732_InitialMigration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Migrations/20230221115732_InitialMigration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Migrations/20230221205231_SecondOne.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Migrations/20230221205231_SecondOne.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Migrations/VideonsContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/ref/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/ref/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/refint/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/refint/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/ref/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/ref/Videons.WebAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/refint/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/refint/Videons.WebAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/prorpo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/qwe.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +164,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/8a/9efbf3ed/SecurityKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/c4/b0950d70/TokenValidationParameters.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/e2/55919a4a/SymmetricSecurityKey.cs" root0="SKIP_HIGHLIGHTING" />
@@ -157,9 +172,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/296c84d22be7053f23e15813c26e08f741d1c3b347ba282d25805329d1/OpenApiSecurityScheme.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2f3e6bfc214439fa30f166129cdd87564821bb95bd98bf795db8c3e13848093/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/42794acf9c224fece37166245d579235973727b16c1931c5ccd329df39ad78/ConfigurationBinder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/44b1161d866765c6ec11ee821b79d9bff8660b65aef1d48c273eb26a29d4a/ResourceInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/532e7dc05236fc6f81e83a513faf54d6bc306b6f66e9fcf7d3111570ed2817ef/SwaggerGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5e71e1a0d437b4746dcd1fd0f55fc64b13f4f7fb25d8b17c3e9eeae62ca3431/AuthenticationServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f2c3a317ee06bc1b0766b94d4e6a045ea25c9a3da49cb9075bcee751250d4/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/71a968c46ba430dbe5e14b270739d338788e9ae6252461c5e5c6f6df8851f6/EndpointMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7733bdb26b2be012c4266979a95d3728e74790201f91a02df4529ee6c2f37/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d5f25f16140a8c3c32feff9ffd314923223dc62a5525f05133cf99f924fb97/ConfigurationSection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
@@ -172,6 +190,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dcedbc87754f258c5cbaf81957c25226a51ba1fd897ccb6a3d357ace4202/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ea80837fcbc25d7a83f1a42ddc197b3c3063604ab5f77253502065f75b34/ModuleRegistrationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/edc076456757744f30b88850e048f669868d9170a6a44aa8a59e8d27d11409e/Channel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9b332439474fbff79649d69152eacac216c62686568150bd1f6ed15f9759/AuthorizationMiddlewareResultHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/ICategoryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -248,7 +267,7 @@
       <workItem from="1676872447205" duration="1419000" />
       <workItem from="1676875103376" duration="14767000" />
       <workItem from="1676957438613" duration="32522000" />
-      <workItem from="1677043858221" duration="5934000" />
+      <workItem from="1677043858221" duration="9760000" />
     </task>
     <servers />
   </component>
@@ -418,84 +437,6 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs</url>
-          <line>42</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs" initialLine="42" containingFunctionPresentation="method 'Add'">
-            <startOffsets>
-              <option value="976" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1021" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs</url>
-          <line>53</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" initialLine="53" containingFunctionPresentation="method 'GetCurrentUser'">
-            <startOffsets>
-              <option value="1749" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1784" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs</url>
-          <line>54</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" initialLine="54" containingFunctionPresentation="method 'GetCurrentUser'">
-            <startOffsets>
-              <option value="1793" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1852" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs</url>
-          <line>55</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" initialLine="55" containingFunctionPresentation="method 'GetCurrentUser'">
-            <startOffsets>
-              <option value="1861" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1903" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs</url>
-          <line>56</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" initialLine="56" containingFunctionPresentation="method 'GetCurrentUser'">
-            <startOffsets>
-              <option value="1912" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1960" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs</url>
-          <line>57</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" initialLine="57" containingFunctionPresentation="method 'GetCurrentUser'">
-            <startOffsets>
-              <option value="1969" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1988" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
           <line>16</line>
           <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="16" containingFunctionPresentation="property 'Channels'">
@@ -511,32 +452,6 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs</url>
-          <line>44</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs" initialLine="44" containingFunctionPresentation="method 'Add'">
-            <startOffsets>
-              <option value="1031" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1127" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" initialLine="21" containingFunctionPresentation="method 'Add'">
-            <startOffsets>
-              <option value="569" />
-            </startOffsets>
-            <endOffsets>
-              <option value="625" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
           <line>22</line>
           <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" initialLine="22" containingFunctionPresentation="method 'Add'">
@@ -549,7 +464,7 @@
               <option value="696" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
@@ -562,7 +477,7 @@
               <option value="857" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
@@ -577,7 +492,7 @@
               <option value="948" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
@@ -590,7 +505,7 @@
               <option value="995" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
@@ -603,7 +518,7 @@
               <option value="1032" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
@@ -616,7 +531,7 @@
               <option value="1087" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

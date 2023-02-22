@@ -6,8 +6,11 @@ using Videons.Entities.DTOs;
 
 namespace Videons.Business.Abstract;
 
+
+// Authentication service interface.
 public interface IAuthService
 {
+    
     IDataResult<User> Register(UserForRegisterDto userForRegisterDto);
     IDataResult<User> Login(UserForLoginDto userForLoginDto);
     IResult UserExists(string email);

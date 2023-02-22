@@ -6,6 +6,12 @@ namespace Videons.Entities.Concrete;
 
 public class Channel : EntityBase
 {
+    public Channel()
+    {
+        Slug = Id.ToString();
+        ImagePath = "";
+    }
+
     [ForeignKey("User")] public Guid UserId { get; set; }
 
     public virtual User User { get; set; }

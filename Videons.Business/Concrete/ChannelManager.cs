@@ -31,8 +31,8 @@ public class ChannelManager : IChannelService
 
         if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");
 
-        channel.Slug = channel.Id.ToString();
-        _channelDal.Update(channel);
+        // channel.Slug = channel.Id.ToString();
+        // _channelDal.Update(channel);
 
         return new SuccessResult("Channel created.");
     }
