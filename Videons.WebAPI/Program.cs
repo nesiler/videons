@@ -3,14 +3,11 @@ using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using Videons.Business.Abstract;
 using Videons.Business.AutoMapper;
-using Videons.Business.Concrete;
 using Videons.Business.DependencyResolvers.Autofac;
 using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
@@ -112,10 +109,8 @@ internal class AuthorizationOperationFilter : IOperationFilter
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
         var actionMetadata = context.ApiDescription.ActionDescriptor.EndpointMetadata;
-        // var isAuthorized = actionMetadata.Any(metadataItem => metadataItem is AuthorizeAttribute);
-        // var allowAnonymous = actionMetadata.Any(metadataItem => metadataItem is AllowAnonymousAttribute);
-        var isAuthorized = true;
-        var allowAnonymous = false;
+        var isAuthorized = actionMetadata.Any(metadataItem => metadataItem is AuthorizeAttribute);
+        var allowAnonymous = actionMetadata.Any(metadataItem => metadataItem is AllowAnonymousAttribute);
         if (!isAuthorized || allowAnonymous) return;
 
         operation.Parameters ??= new List<OpenApiParameter>();
