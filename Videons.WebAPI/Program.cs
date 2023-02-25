@@ -13,7 +13,6 @@ using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
 using Videons.DataAccess.Concrete.EntityFramework;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

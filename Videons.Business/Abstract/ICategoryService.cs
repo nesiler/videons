@@ -3,6 +3,7 @@ using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
 namespace Videons.Business.Abstract;
+
 public interface ICategoryService
 {
     IDataResult<IList<CategoryDto>> GetList();
