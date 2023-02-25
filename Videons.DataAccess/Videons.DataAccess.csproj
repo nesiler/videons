@@ -7,17 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Videons.Core\Videons.Core.csproj"/>
-        <ProjectReference Include="..\Videons.Entities\Videons.Entities.csproj"/>
+        <ProjectReference Include="..\Videons.Core\Videons.Core.csproj" />
+        <ProjectReference Include="..\Videons.Entities\Videons.Entities.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.14"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.14" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.14">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8" />
     </ItemGroup>
 
 </Project>
