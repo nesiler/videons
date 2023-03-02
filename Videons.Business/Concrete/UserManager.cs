@@ -14,9 +14,10 @@ public class UserManager : IUserService
     private readonly IUserDal _userDal;
 
 
-    public UserManager(IUserDal userDal)
+    public UserManager(IUserDal userDal, IChannelDal channelDal)
     {
         _userDal = userDal;
+        _channelDal = channelDal;
     }
 
     public User GetById(Guid id)
@@ -31,9 +32,24 @@ public class UserManager : IUserService
 
     public IResult Add(User user)
     {
-        return _userDal.CreateNewUser(user)
-            ? new SuccessResult()
-            : new ErrorResult();
+        var _channelService = new ChannelManager(_channelDal, this, null);
+
+        var userCreated = _userDal.Add(user);
+        var channel = new ChannelDto
+        {
+            Name = user.FirstName + " " + user.LastName,
+            UserId = user.Id
+        };
+
+        var channelCreated = _channelService.Add(channel);
+
+        return userCreated && channelCreated.Success
+            ? new SuccessResult("User created.")
+            : new ErrorResult("User cannot created!");
+
+        // return _userDal.CreateNewUser(user)
+        //     ? new SuccessResult()
+        //     : new ErrorResult();
     }
 
     public List<OperationClaim> GetClaims(User user)
@@ -56,5 +72,18 @@ public class UserManager : IUserService
         return _userDal.Update(user)
             ? new SuccessResult("Password updated.")
             : new ErrorResult("Password cannot updated");
+    }
+
+    public IResult DeleteAccount(UserForLoginDto userForLoginDto)
+    {
+        var user = GetByEmail(userForLoginDto.Email);
+        if (user == null) return new ErrorResult("User not found!");
+
+        if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, user.PasswordHash, user.PasswordSalt))
+            return new ErrorResult("Password is incorrect!");
+
+        return _userDal.Delete(user)
+            ? new SuccessResult("Account deleted.")
+            : new ErrorResult("Account cannot deleted!");
     }
 }

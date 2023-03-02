@@ -1,8 +1,6 @@
 using Videons.Business.Abstract;
-using Videons.Core.DataAccess.EntityFramework;
 using Videons.Core.Utilities.Results;
 using Videons.DataAccess.Abstract;
-using Videons.DataAccess.Concrete.EntityFramework;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
@@ -11,8 +9,8 @@ namespace Videons.Business.Concrete;
 public class ChannelManager : IChannelService
 {
     private readonly IChannelDal _channelDal;
-    private readonly IUserService _userService;
     private readonly IHistoryDal _historyDal;
+    private readonly IUserService _userService;
 
     public ChannelManager(IChannelDal channelDal, IUserService userService, IHistoryDal historyDal)
     {
@@ -40,7 +38,7 @@ public class ChannelManager : IChannelService
 
         if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");
 
-        _channelDal.Update(channel);
+        // _channelDal.Update(channel);
 
         return new SuccessResult("Channel created.");
     }
@@ -65,7 +63,7 @@ public class ChannelManager : IChannelService
 
         if (channel == null) return new ErrorResult("Channel cannot found!");
         _historyDal.Add(history);
-        
+
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");

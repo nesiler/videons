@@ -70,4 +70,14 @@ public class AuthController : ControllerBase
             ? Ok(result)
             : BadRequest(result);
     }
+
+    [HttpDelete("delete-account")]
+    [Authorize]
+    public IActionResult DeleteAccount([FromBody] UserForLoginDto userForLoginDto)
+    {
+        var result = _userService.DeleteAccount(userForLoginDto);
+        return result.Success
+            ? Ok(result)
+            : BadRequest(result);
+    }
 }

@@ -16,7 +16,8 @@ public class VideosController : ControllerBase
     private readonly IUserService _userService;
     private readonly IVideoService _videoService;
 
-    public VideosController(IVideoService videoService, IMapper mapper, IUserService userService, IChannelService channelService)
+    public VideosController(IVideoService videoService, IMapper mapper, IUserService userService,
+        IChannelService channelService)
     {
         _videoService = videoService;
         _mapper = mapper;

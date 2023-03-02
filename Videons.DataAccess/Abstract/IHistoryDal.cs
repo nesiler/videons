@@ -3,7 +3,6 @@ using Videons.Entities.Concrete;
 
 namespace Videons.DataAccess.Abstract;
 
-public interface IHistoryDal  : IEntityRepository<History>
+public interface IHistoryDal : IEntityRepository<History>
 {
-    
 }
