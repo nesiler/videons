@@ -1,8 +1,8 @@
 using Videons.Business.Abstract;
-using Videons.Core.Entities.Concrete;
 using Videons.Core.Utilities.Results;
 using Videons.Core.Utilities.Security.Hashing;
 using Videons.Core.Utilities.Security.Jwt;
+using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
 namespace Videons.Business.Concrete;
@@ -31,10 +31,9 @@ public class AuthManager : IAuthService
             PasswordSalt = passwordSalt,
             Status = true
         };
-
         return _userService.Add(user).Success
-            ? new SuccessDataResult<User>(user, "User created.")
-            : new ErrorDataResult<User>(null, "User cannot created");
+            ? new SuccessDataResult<User>(user, "Registration successful")
+            : new ErrorDataResult<User>(null, "Registration failed");
     }
 
     public IDataResult<User> Login(UserForLoginDto userForLoginDto)

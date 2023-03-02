@@ -9,9 +9,139 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IVideoService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.Business/Concrete/VideoManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IVideoDal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfVideoDal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/VideoDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/VideoUpdateDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/VideosController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/AutoMapper/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/AutoMapper/AutoMapperProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Videons.Business.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Videons.Business.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/bin/Debug/net6.0/Videons.Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/ref/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/ref/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/refint/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/refint/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Videons.Business.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Videons.Business.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Entities/Concrete/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Entities/Concrete/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Entities/EntityBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Entities/EntityBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/ITokenHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/ITokenHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/JwtHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/JwtHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Videons.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Videons.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/ref/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/ref/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/refint/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/refint/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Videons.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Videons.Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IUserDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Videons.DataAccess.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Videons.DataAccess.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/bin/Debug/net6.0/Videons.Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/ref/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/ref/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/refint/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/refint/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Videons.DataAccess.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Videons.DataAccess.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Playlist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Playlist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/DTOs/ChannelUpdateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/ChannelUpdateDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/DTOs/PlaylistUpdateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/PlaylistUpdateDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Videons.Entities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Videons.Entities.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/bin/Debug/net6.0/Videons.Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/ref/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/ref/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/refint/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/refint/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Videons.Entities.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Videons.Entities.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/PlaylistsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/PlaylistsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Videons.WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Videons.WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/bin/Debug/net6.0/Videons.WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/apphost" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/ref/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/ref/Videons.WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/refint/Videons.WebAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/refint/Videons.WebAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Videons.WebAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Videons.WebAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,13 +156,18 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/8a/9efbf3ed/SecurityKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/c4/b0950d70/TokenValidationParameters.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/e2/55919a4a/SymmetricSecurityKey.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d23ddb881ebc4d4290991a839764b5827600/92/9826e54b/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/201163a2476615e8e92ea1f40cf5c4f545e20ffc550117de25937deb4102086/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/296c84d22be7053f23e15813c26e08f741d1c3b347ba282d25805329d1/OpenApiSecurityScheme.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2f3e6bfc214439fa30f166129cdd87564821bb95bd98bf795db8c3e13848093/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e4f7a9a3455ee5db67027c2d9a683bb4ff9b7413c518e95e32a87031db3fb6/CoreLoggerExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/42794acf9c224fece37166245d579235973727b16c1931c5ccd329df39ad78/ConfigurationBinder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/448710c072cd505a91f973653edcc7437d99046457f8c6b9979fea335276e8/ColumnAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/44b1161d866765c6ec11ee821b79d9bff8660b65aef1d48c273eb26a29d4a/ResourceInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/475f84cd48a927741fdb32fdbce38732197d3db72869557db04a933673d066/ForeignKeyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/532e7dc05236fc6f81e83a513faf54d6bc306b6f66e9fcf7d3111570ed2817ef/SwaggerGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a9742a8525be1eba17ec58d411798ed7d35a5dbd737749d44faf8c49299f96/CoreStrings.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5e71e1a0d437b4746dcd1fd0f55fc64b13f4f7fb25d8b17c3e9eeae62ca3431/AuthenticationServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f2c3a317ee06bc1b0766b94d4e6a045ea25c9a3da49cb9075bcee751250d4/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/71a968c46ba430dbe5e14b270739d338788e9ae6252461c5e5c6f6df8851f6/EndpointMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
@@ -45,24 +180,33 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c197ef9ddaaf18a22eb72595ceb984d9dc89032fa86e66c26edbb60e476bd/HttpsRedirectionBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c854e9701da0dbfde76caa7f37743082eb91e1bc26523d7ff25ff4cce123f/ConfigurationManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d1f68ef86315497c7b39ddb155d5cf3ace964abca69857f9943cd58479799/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4f98ebdd878db4fbd98872756eb7be6ad9e468fe5cd6b16385d8c4993109a/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc66e6d4ddcd4ed6995ee5198eb13742b55800/_efc3c/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dcedbc87754f258c5cbaf81957c25226a51ba1fd897ccb6a3d357ace4202/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ea80837fcbc25d7a83f1a42ddc197b3c3063604ab5f77253502065f75b34/ModuleRegistrationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/edc076456757744f30b88850e048f669868d9170a6a44aa8a59e8d27d11409e/Channel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9b332439474fbff79649d69152eacac216c62686568150bd1f6ed15f9759/AuthorizationMiddlewareResultHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../BookStore/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/ICategoryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/AutoMapper/AutoMapperProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Core/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Videons.Core/Entities/Concrete/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Videons.DataAccess/Abstract/IUserDal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfCategoryDal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Entities/Concrete/Category.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.WebAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../dot6/dot6/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -87,7 +231,7 @@
     "XThreadsFramesViewSplitterKey": "0.37372014",
     "full.screen.before.presentation.mode": "true",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -133,6 +277,11 @@
       <workItem from="1677136167767" duration="1023000" />
       <workItem from="1677145948957" duration="2409000" />
       <workItem from="1677184759724" duration="10473000" />
+      <workItem from="1677507311215" duration="2626000" />
+      <workItem from="1677532986924" duration="8884000" />
+      <workItem from="1677586085144" duration="5272000" />
+      <workItem from="1677591792480" duration="14802000" />
+      <workItem from="1677656904437" duration="17627000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1677097172285</created>
@@ -169,19 +318,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
-          <line>16</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="16" containingFunctionPresentation="property 'Channels'">
+          <url>file://$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" initialLine="31" containingFunctionPresentation="method 'Register'">
             <startOffsets>
-              <option value="570" />
-              <option value="575" />
+              <option value="1007" />
+              <option value="1036" />
             </startOffsets>
             <endOffsets>
-              <option value="574" />
-              <option value="579" />
+              <option value="1035" />
+              <option value="1070" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="39" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

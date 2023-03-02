@@ -10,8 +10,8 @@ public abstract class EntityBase
     [Key]
     public Guid Id { get; set; }
 
-    [Column(Order = 1200)] public DateTime? CreatedAt { get; set; }
 
+    [Column(Order = 1200)] public DateTime? CreatedAt { get; set; }
     [Column(Order = 1300)] public DateTime? UpdatedAt { get; set; }
 
     [Column(Order = 1400)] public Guid? CreatedBy { get; set; }

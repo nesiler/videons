@@ -25,7 +25,7 @@ public class PlaylistsController : ControllerBase
             ? Ok(result.Data)
             : BadRequest(result.Message);
     }
-    
+
     [HttpGet("channel/{id}")]
     public IActionResult GetListByChannelId(Guid id)
     {

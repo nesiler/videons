@@ -3,13 +3,16 @@ using Videons.Core.Entities.Concrete;
 using Videons.Core.Utilities.Results;
 using Videons.Core.Utilities.Security.Hashing;
 using Videons.DataAccess.Abstract;
+using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
 namespace Videons.Business.Concrete;
 
 public class UserManager : IUserService
 {
+    private readonly IChannelDal _channelDal;
     private readonly IUserDal _userDal;
+
 
     public UserManager(IUserDal userDal)
     {
@@ -28,7 +31,7 @@ public class UserManager : IUserService
 
     public IResult Add(User user)
     {
-        return _userDal.Add(user)
+        return _userDal.CreateNewUser(user)
             ? new SuccessResult()
             : new ErrorResult();
     }

@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using Videons.Core.Entities.Concrete;
 using Videons.Core.Extensions;
 using Videons.Core.Utilities.Security.Encryption;
+using Videons.Entities.Concrete;
 
 namespace Videons.Core.Utilities.Security.Jwt;
 
@@ -19,7 +20,7 @@ public class JwtHelper : ITokenHelper
 
         var tokenOptionsSection = Configuration.GetSection("TokenOptions");
         _tokenOptions = new TokenOptions();
-        // tokenOptionsSection.Bind(_tokenOptions);
+        tokenOptionsSection.Bind(_tokenOptions);
         _tokenOptions.Issuer = tokenOptionsSection["Issuer"];
         _tokenOptions.Audience = tokenOptionsSection["Audience"];
         _tokenOptions.SecurityKey = tokenOptionsSection["SecurityKey"];

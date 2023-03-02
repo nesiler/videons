@@ -1,4 +1,8 @@
-namespace Videons.Core.Entities.Concrete;
+using System.ComponentModel.DataAnnotations.Schema;
+using Videons.Core.Entities;
+using Videons.Entities.Concrete;
+
+namespace Videons.Entities.Concrete;
 
 public class User : EntityBase
 {

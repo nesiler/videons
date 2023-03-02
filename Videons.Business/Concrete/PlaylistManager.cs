@@ -61,7 +61,6 @@ public class PlaylistManager : IPlaylistService
         playlist.Name = playlistUpdateDto.Name;
         playlist.Description = playlistUpdateDto.Description;
         playlist.Visibility = playlistUpdateDto.Visibility;
-        playlist.PlaylistVideos.Add(playlistUpdateDto.PlaylistVideos);
 
         return _playlistDal.Update(playlist)
             ? new SuccessResult("Playlist updated.")

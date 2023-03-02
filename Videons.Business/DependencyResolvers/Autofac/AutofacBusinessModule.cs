@@ -13,6 +13,9 @@ public class AutofacBusinessModule : Module
     {
         builder.RegisterType<ChannelManager>().As<IChannelService>();
         builder.RegisterType<EfChannelDal>().As<IChannelDal>();
+        
+        builder.RegisterType<VideoManager>().As<IVideoService>();
+        builder.RegisterType<EfVideoDal>().As<IVideoDal>();
 
         builder.RegisterType<CategoryManager>().As<ICategoryService>();
         builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();

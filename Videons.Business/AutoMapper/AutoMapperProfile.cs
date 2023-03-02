@@ -1,5 +1,4 @@
 using AutoMapper;
-using Videons.Core.Entities.Concrete;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
@@ -12,5 +11,7 @@ public class AutoMapperProfile : Profile
         CreateMap<Category, CategoryDto>();
         CreateMap<CategoryCreateUpdateDto, Category>();
         CreateMap<User, CurrentUserDto>();
+        CreateMap<User, UserForRegisterDto>();
+        CreateMap<Channel, ChannelDto>();
     }
 }

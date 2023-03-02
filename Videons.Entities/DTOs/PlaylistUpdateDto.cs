@@ -8,5 +8,4 @@ public class PlaylistUpdateDto : IDto
     public string Name { get; set; }
     public string Description { get; set; }
     public PlaylistVisibility Visibility { get; set; }
-    public PlaylistVideo PlaylistVideos { get; set; }
 }
