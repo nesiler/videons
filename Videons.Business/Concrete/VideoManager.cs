@@ -8,12 +8,12 @@ namespace Videons.Business.Concrete;
 
 public class VideoManager : IVideoService
 {
-    private readonly IVideoDal _videoDal;
-    private readonly  IChannelService _channelService;
-    private readonly  IAuthService _authService;
+    private readonly IAuthService _authService;
+    private readonly IChannelService _channelService;
     private readonly IUserService _userService;
+    private readonly IVideoDal _videoDal;
 
-    public VideoManager(IVideoDal videoDal , IChannelService channelService)
+    public VideoManager(IVideoDal videoDal, IChannelService channelService)
     {
         _channelService = channelService;
         _videoDal = videoDal;
@@ -33,42 +33,49 @@ public class VideoManager : IVideoService
     public IResult Add(VideoDto videoDto)
     {
         var channelExist = _channelService.GetById(videoDto.ChannelId);
-        if(channelExist == null) return new ErrorResult("Invalid channel");
-        
+        if (channelExist == null) return new ErrorResult("Invalid channel");
+
         var video = new Video
         {
             Title = videoDto.Title,
             Description = videoDto.Description,
             ChannelId = videoDto.ChannelId,
-            StreamId = videoDto.StreamId,
-        }; 
-        
+            StreamId = videoDto.StreamId
+        };
+
         if (!_videoDal.Add(video)) return new ErrorResult("Video cannot added!");
 
         return new SuccessResult("Video added.");
-        
     }
 
     public IResult Update(Guid id, VideoUpdateDto videoUpdateDto)
     {
         var video = GetById(id);
-        
-        if(video == null) return new ErrorResult("Video cannot found!");
-        
+
+        if (video == null) return new ErrorResult("Video cannot found!");
+
         video.Title = videoUpdateDto.Title;
         video.Description = videoUpdateDto.Description;
         video.StreamId = videoUpdateDto.StreamId;
         video.Visibility = videoUpdateDto.Visibility;
-        
+
         return _videoDal.Update(video)
             ? new SuccessResult("Video updated.")
             : new ErrorResult("Video cannot updated!");
     }
 
-    public IResult Watch(Guid videoId)
+    public Video Watch(Guid videoId, Guid channelId)
     {
         var video = GetById(videoId);
+        if (video == null) return null;
+        
+        var channel = _channelService.GetById(channelId);
+        if (channel == null) return null;
+        
+        if (video.Visibility == VideoVisibility.Private && video.ChannelId != channel.Id) return null;
         
         
+        
+        return video;
     }
 }

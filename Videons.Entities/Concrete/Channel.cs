@@ -10,8 +10,7 @@ public class Channel : EntityBase
         ImagePath = "";
     }
 
-    [ForeignKey("User")] 
-    public Guid UserId { get; set; }
+    [ForeignKey("User")] public Guid UserId { get; set; }
 
     public virtual User User { get; set; }
     public string Name { get; set; }
@@ -19,6 +18,6 @@ public class Channel : EntityBase
     public bool Verified { get; set; }
 
     public ICollection<Video> Videos { get; set; }
-    
+
     public ICollection<History> Histories { get; set; }
 }

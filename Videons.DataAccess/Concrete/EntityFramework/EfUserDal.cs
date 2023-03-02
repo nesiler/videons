@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Videons.Core.DataAccess.EntityFramework;
 using Videons.Core.Entities.Concrete;
-using Videons.Core.Utilities.Results;
 using Videons.DataAccess.Abstract;
 using Videons.Entities.Concrete;
 
@@ -10,6 +9,7 @@ namespace Videons.DataAccess.Concrete.EntityFramework;
 public class EfUserDal : EfEntityRepositoryBase<User, VideonsContext>, IUserDal
 {
     private readonly IChannelDal _channelDal;
+
     public EfUserDal(VideonsContext context) : base(context)
     {
         _channelDal = new EfChannelDal(context);
@@ -38,7 +38,7 @@ public class EfUserDal : EfEntityRepositoryBase<User, VideonsContext>, IUserDal
             Verified = false,
             UserId = user.Id
         };
-        
+
         return _channelDal.Add(channel);
     }
 }

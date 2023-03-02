@@ -1,3 +1,5 @@
+using System.Security.Claims;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Videons.Business.Abstract;
@@ -5,16 +7,20 @@ using Videons.Entities.DTOs;
 
 namespace Videons.WebAPI.Controllers;
 
-
 [ApiController]
 [Route("api/[controller]")]
 public class VideosController : ControllerBase
 {
+    private readonly IChannelService _channelService;
+    private readonly IMapper _mapper;
+    private readonly IUserService _userService;
     private readonly IVideoService _videoService;
 
-    public VideosController(IVideoService videoService)
+    public VideosController(IVideoService videoService, IMapper mapper, IUserService userService)
     {
         _videoService = videoService;
+        _mapper = mapper;
+        _userService = userService;
     }
 
     [HttpGet]
@@ -58,13 +64,18 @@ public class VideosController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
+
     [HttpGet("{id}")]
     public IActionResult Watch(Guid id)
     {
-        var video = _videoService.Watch(id);
+        var currentUser = HttpContext.User;
+        var email = currentUser.FindFirst(ClaimTypes.Email)?.Value;
+        var user = _userService.GetByEmail(email);
+        var channel = _channelService.GetByUserId(user.Id);
+        var video = _videoService.Watch(id, channel.Id);
+        var videoDto = _mapper.Map<VideoDto>(video);
 
-        return video != null
+        return videoDto != null
             ? Ok(video)
             : NotFound();
     }

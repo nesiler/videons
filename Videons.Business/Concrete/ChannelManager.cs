@@ -17,6 +17,11 @@ public class ChannelManager : IChannelService
         _userService = userService;
     }
 
+    public Channel GetByUserEmail(string email)
+    {
+        return _channelDal.Get(c => c.User.Email == email);
+    }
+
     public IResult Add(ChannelDto channelDto)
     {
         var userExist = _userService.GetById(channelDto.UserId);
@@ -50,6 +55,18 @@ public class ChannelManager : IChannelService
             : new ErrorResult("Channel cannot updated!");
     }
 
+    public IResult ChannelAction(Guid id, ChannelActionDto channelActionDto)
+    {
+        var channel = GetById(id);
+
+        if (channel == null) return new ErrorResult("Channel cannot found!");
+        
+        channel.Histories.Add(channelActionDto.Videos);
+        return _channelDal.Update(channel)
+            ? new SuccessResult("Channel updated.")
+            : new ErrorResult("Channel cannot updated!");
+    }
+
     public IDataResult<IList<Channel>> GetList()
     {
         var channels = _channelDal.GetList();
@@ -60,5 +77,9 @@ public class ChannelManager : IChannelService
     {
         return _channelDal.Get(c => c.Id == channelId);
     }
-    
+
+    public Channel GetByUserId(Guid userId)
+    {
+        return _channelDal.Get(c => c.UserId == userId);
+    }
 }

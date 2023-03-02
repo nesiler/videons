@@ -13,7 +13,7 @@ public class AutofacBusinessModule : Module
     {
         builder.RegisterType<ChannelManager>().As<IChannelService>();
         builder.RegisterType<EfChannelDal>().As<IChannelDal>();
-        
+
         builder.RegisterType<VideoManager>().As<IVideoService>();
         builder.RegisterType<EfVideoDal>().As<IVideoDal>();
 

@@ -8,6 +8,9 @@ public interface IChannelService
 {
     IDataResult<IList<Channel>> GetList();
     Channel GetById(Guid channelId);
+    Channel GetByUserId(Guid userId);
+    Channel GetByUserEmail(string email);
     IResult Add(ChannelDto channelDto);
     IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
+    IResult ChannelAction(ChannelActionDto channelActionDto);
 }
