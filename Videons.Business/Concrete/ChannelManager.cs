@@ -60,9 +60,9 @@ public class ChannelManager : IChannelService
         var channel = GetById(id);
 
         if (channel == null) return new ErrorResult("Channel cannot found!");
-        
+
         channel.Histories.Add(history);
-        
+
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");
@@ -73,9 +73,9 @@ public class ChannelManager : IChannelService
         var channel = GetById(id);
 
         if (channel == null) return new ErrorResult("Channel cannot found!");
-        
+
         channel.Videos.Add(video);
-        
+
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");

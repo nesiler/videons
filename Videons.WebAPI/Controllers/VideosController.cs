@@ -66,6 +66,7 @@ public class VideosController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize]
     public IActionResult Watch(Guid id)
     {
         var currentUser = HttpContext.User;

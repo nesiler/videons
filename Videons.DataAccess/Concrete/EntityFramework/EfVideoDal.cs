@@ -10,8 +10,10 @@ public class EfVideoDal : EfEntityRepositoryBase<Video, VideonsContext>, IVideoD
     {
     }
 
-    public Video Watch(Guid videoId)
+    public bool Watch(Guid videoId)
     {
-        throw new NotImplementedException();
+        var video = Context.Videos.FirstOrDefault(v => v.Id == videoId);
+        video.Views++;
+        return Context.SaveChanges() > 0;
     }
 }

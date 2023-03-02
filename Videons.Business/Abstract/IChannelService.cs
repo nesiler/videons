@@ -14,5 +14,4 @@ public interface IChannelService
     IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
     IResult ChannelAction(Guid id, History history);
     IResult ChannelAddVideo(Guid id, Video video);
-
 }

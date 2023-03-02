@@ -13,5 +13,9 @@ public class AutoMapperProfile : Profile
         CreateMap<User, CurrentUserDto>();
         CreateMap<User, UserForRegisterDto>();
         CreateMap<Channel, ChannelDto>();
+        CreateMap<Video, VideoDto>();
+        CreateMap<Video, VideoUpdateDto>();
+        CreateMap<Playlist, PlaylistDto>();
+        CreateMap<Playlist, PlaylistUpdateDto>();
     }
 }

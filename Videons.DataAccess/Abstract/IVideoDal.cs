@@ -5,5 +5,5 @@ namespace Videons.DataAccess.Abstract;
 
 public interface IVideoDal : IEntityRepository<Video>
 {
-    public Video Watch(Guid videoId);
+    public bool Watch(Guid videoId);
 }

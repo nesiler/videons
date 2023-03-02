@@ -68,12 +68,21 @@ public class VideoManager : IVideoService
     {
         var video = GetById(videoId);
         if (video == null) return null;
-        
+
         var channel = _channelService.GetById(channelId);
-        if (channel == null) return null;
-        
+        // if (channel == null) return null;
+
         if (video.Visibility == VideoVisibility.Private && video.ChannelId != channel.Id) return null;
-        video.WatchCount++;
+        _videoDal.Watch(videoId);
+
+        var history = new History
+        {
+            ChannelId = channel.Id,
+            VideoId = video.Id
+        };
+
+        _channelService.ChannelAction(channel.Id, history);
+
         return video;
     }
 }
