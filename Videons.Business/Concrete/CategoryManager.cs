@@ -55,4 +55,15 @@ public class CategoryManager : ICategoryService
             ? new SuccessResult("Category updated.")
             : new ErrorResult("Category cannot updated!");
     }
+
+    public IResult Delete(Guid id)
+    {
+        var categoryResult = GetById(id);
+        if (!categoryResult.Success) return new ErrorResult(categoryResult.Message);
+        
+        var category = categoryResult.Data;
+        return _categoryDal.Delete(category)
+            ? new SuccessResult("Category deleted.")
+            : new ErrorResult("Category cannot deleted!");
+    }
 }

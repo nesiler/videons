@@ -10,4 +10,5 @@ public interface ICategoryService
     IDataResult<Category> GetById(Guid id);
     IResult Add(CategoryCreateUpdateDto categoryDto);
     IResult Update(Guid id, CategoryCreateUpdateDto categoryDto);
+    IResult Delete(Guid id);
 }

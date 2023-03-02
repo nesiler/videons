@@ -88,4 +88,14 @@ public class VideoManager : IVideoService
 
         return video;
     }
+
+    public IResult Delete(Guid id)
+    {
+        var video = GetById(id);
+        if (video == null) return new ErrorResult("Video cannot found!");
+        
+        return _videoDal.Delete(video)
+            ? new SuccessResult("Video deleted.")
+            : new ErrorResult("Video cannot deleted!");
+    }
 }

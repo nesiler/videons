@@ -11,4 +11,6 @@ public interface IPlaylistService
     Playlist GetById(Guid playlistId);
     IResult Add(PlaylistDto playlistDto);
     IResult Update(Guid id, PlaylistUpdateDto playlistUpdateDto);
+    IResult Delete(Guid id);
+    
 }

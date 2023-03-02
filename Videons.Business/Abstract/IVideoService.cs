@@ -11,4 +11,5 @@ public interface IVideoService
     IResult Add(VideoDto videoDto);
     IResult Update(Guid id, VideoUpdateDto videoUpdateDto);
     Video Watch(Guid videoId, Guid channelId);
+    IResult Delete(Guid id);
 }

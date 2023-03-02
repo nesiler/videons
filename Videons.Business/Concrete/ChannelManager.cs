@@ -82,6 +82,23 @@ public class ChannelManager : IChannelService
             : new ErrorResult("Channel cannot updated!");
     }
 
+    public IResult ChannelRemoveVideo(Guid id, Video video)
+    {
+        //TODO
+        throw new NotImplementedException();
+    }
+
+    public IResult Delete(Guid id)
+    {
+        var channel = GetById(id);
+
+        if (channel == null) return new ErrorResult("Channel cannot found!");
+
+        return _channelDal.Delete(channel)
+            ? new SuccessResult("Channel deleted.")
+            : new ErrorResult("Channel cannot deleted!");
+    }
+
     public IDataResult<IList<Channel>> GetList()
     {
         var channels = _channelDal.GetList();
