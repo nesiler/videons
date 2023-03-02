@@ -12,5 +12,7 @@ public interface IChannelService
     Channel GetByUserEmail(string email);
     IResult Add(ChannelDto channelDto);
     IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
-    IResult ChannelAction(ChannelActionDto channelActionDto);
+    IResult ChannelAction(Guid id, History history);
+    IResult ChannelAddVideo(Guid id, Video video);
+
 }

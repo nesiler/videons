@@ -55,13 +55,27 @@ public class ChannelManager : IChannelService
             : new ErrorResult("Channel cannot updated!");
     }
 
-    public IResult ChannelAction(Guid id, ChannelActionDto channelActionDto)
+    public IResult ChannelAction(Guid id, History history)
     {
         var channel = GetById(id);
 
         if (channel == null) return new ErrorResult("Channel cannot found!");
         
-        channel.Histories.Add(channelActionDto.Videos);
+        channel.Histories.Add(history);
+        
+        return _channelDal.Update(channel)
+            ? new SuccessResult("Channel updated.")
+            : new ErrorResult("Channel cannot updated!");
+    }
+
+    public IResult ChannelAddVideo(Guid id, Video video)
+    {
+        var channel = GetById(id);
+
+        if (channel == null) return new ErrorResult("Channel cannot found!");
+        
+        channel.Videos.Add(video);
+        
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");

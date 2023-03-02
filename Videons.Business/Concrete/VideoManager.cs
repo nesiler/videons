@@ -73,9 +73,7 @@ public class VideoManager : IVideoService
         if (channel == null) return null;
         
         if (video.Visibility == VideoVisibility.Private && video.ChannelId != channel.Id) return null;
-        
-        
-        
+        video.WatchCount++;
         return video;
     }
 }
