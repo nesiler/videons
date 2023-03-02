@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l96/VzpId/D04sfkYo2PSF1POYD+Mq+6YYQpe4IdS4TKNmDKOY1tV4yZ6t4Geb6rLIsugRDRP4HV0KNSqpIGUA==",
+  "dgSpecHash": "712UFbvJZo1CfR9CiTJyTxup8gwBHIcs2TfsDbWW3nOjAeEl9WljZJqEkEXhijKVEEufLrTlITNe5UKRgTB5Xg==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/Videons.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "/Users/enesdiler/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/identitymodel/6.1.0-preview.2/identitymodel.6.1.0-preview.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.14/microsoft.aspnetcore.authentication.jwtbearer.6.0.14.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.14/microsoft.aspnetcore.jsonpatch.6.0.14.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.14/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.14.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.entityframeworkcore/6.0.14/microsoft.entityframeworkcore.6.0.14.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.14/microsoft.entityframeworkcore.abstractions.6.0.14.nupkg.sha512",
@@ -35,6 +37,8 @@
     "/Users/enesdiler/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/npgsql/6.0.8/npgsql.6.0.8.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.8/npgsql.entityframeworkcore.postgresql.6.0.8.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",

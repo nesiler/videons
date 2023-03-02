@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Videons.Core.DataAccess.EntityFramework;
 using Videons.DataAccess.Abstract;
 using Videons.Entities.Concrete;
@@ -14,6 +15,9 @@ public class EfVideoDal : EfEntityRepositoryBase<Video, VideonsContext>, IVideoD
     {
         var video = Context.Videos.FirstOrDefault(v => v.Id == videoId);
         video.Views++;
+        video.UpdatedAt = DateTime.Now.ToUniversalTime();
+        var entry = Context.Entry(video);
+        entry.State = EntityState.Modified;
         return Context.SaveChanges() > 0;
     }
 }

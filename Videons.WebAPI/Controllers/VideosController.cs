@@ -16,11 +16,12 @@ public class VideosController : ControllerBase
     private readonly IUserService _userService;
     private readonly IVideoService _videoService;
 
-    public VideosController(IVideoService videoService, IMapper mapper, IUserService userService)
+    public VideosController(IVideoService videoService, IMapper mapper, IUserService userService, IChannelService channelService)
     {
         _videoService = videoService;
         _mapper = mapper;
         _userService = userService;
+        _channelService = channelService;
     }
 
     [HttpGet]
@@ -65,7 +66,7 @@ public class VideosController : ControllerBase
             : BadRequest(result.Message);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("watch/{id}")]
     [Authorize]
     public IActionResult Watch(Guid id)
     {

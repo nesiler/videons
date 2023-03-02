@@ -54,3 +54,7 @@
 /Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.pdb
 /Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.genruntimeconfig.cache
 /Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/obj/Debug/net6.0/ref/Videons.WebAPI.dll
+/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll

@@ -40,7 +40,9 @@ public class VideoManager : IVideoService
             Title = videoDto.Title,
             Description = videoDto.Description,
             ChannelId = videoDto.ChannelId,
-            StreamId = videoDto.StreamId
+            CategoryId = videoDto.CategoryId,
+            StreamId = videoDto.StreamId,
+            PublishDate = DateTime.Now.ToUniversalTime()
         };
 
         if (!_videoDal.Add(video)) return new ErrorResult("Video cannot added!");
@@ -78,7 +80,8 @@ public class VideoManager : IVideoService
         var history = new History
         {
             ChannelId = channel.Id,
-            VideoId = video.Id
+            VideoId = video.Id,
+            Time = 123
         };
 
         _channelService.ChannelAction(channel.Id, history);

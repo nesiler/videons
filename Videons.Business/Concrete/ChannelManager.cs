@@ -1,6 +1,8 @@
 using Videons.Business.Abstract;
+using Videons.Core.DataAccess.EntityFramework;
 using Videons.Core.Utilities.Results;
 using Videons.DataAccess.Abstract;
+using Videons.DataAccess.Concrete.EntityFramework;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
@@ -10,11 +12,13 @@ public class ChannelManager : IChannelService
 {
     private readonly IChannelDal _channelDal;
     private readonly IUserService _userService;
+    private readonly IHistoryDal _historyDal;
 
-    public ChannelManager(IChannelDal channelDal, IUserService userService)
+    public ChannelManager(IChannelDal channelDal, IUserService userService, IHistoryDal historyDal)
     {
         _channelDal = channelDal;
         _userService = userService;
+        _historyDal = historyDal;
     }
 
     public Channel GetByUserEmail(string email)
@@ -60,9 +64,8 @@ public class ChannelManager : IChannelService
         var channel = GetById(id);
 
         if (channel == null) return new ErrorResult("Channel cannot found!");
-
-        channel.Histories.Add(history);
-
+        _historyDal.Add(history);
+        
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");

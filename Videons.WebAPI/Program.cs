@@ -12,6 +12,8 @@ using Videons.Business.DependencyResolvers.Autofac;
 using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
 using Videons.DataAccess.Concrete.EntityFramework;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -81,6 +83,8 @@ var mapper = mappingConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
 var app = builder.Build();
 
