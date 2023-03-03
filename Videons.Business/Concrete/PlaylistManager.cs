@@ -66,4 +66,14 @@ public class PlaylistManager : IPlaylistService
             ? new SuccessResult("Playlist updated.")
             : new ErrorResult("Playlist cannot updated!");
     }
+
+    public IResult Delete(Guid id)
+    {
+        var playlist = GetById(id);
+        if (playlist == null) return new ErrorResult("Playlist cannot found!");
+
+        return _playlistDal.Delete(playlist)
+            ? new SuccessResult("Playlist deleted.")
+            : new ErrorResult("Palylsit cannot deleted!");
+    }
 }
