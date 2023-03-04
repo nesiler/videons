@@ -1,4 +1,4 @@
-using Videons.Business.Abstract;
+ using Videons.Business.Abstract;
 using Videons.Core.Entities.Concrete;
 using Videons.Core.Utilities.Results;
 using Videons.Core.Utilities.Security.Hashing;
@@ -12,14 +12,12 @@ public class UserManager : IUserService
 {
     private readonly IChannelDal _channelDal;
     private readonly IUserDal _userDal;
-
-
     public UserManager(IUserDal userDal, IChannelDal channelDal)
     {
         _userDal = userDal;
         _channelDal = channelDal;
     }
-
+    
     public User GetById(Guid id)
     {
         return _userDal.Get(u => u.Id == id);
@@ -30,10 +28,9 @@ public class UserManager : IUserService
         return _userDal.Get(u => u.Email == email);
     }
 
-    public IResult Add(User user)
+    public IResult Add(User user  )
     {
         var _channelService = new ChannelManager(_channelDal, this, null);
-
         var userCreated = _userDal.Add(user);
         var channel = new ChannelDto
         {

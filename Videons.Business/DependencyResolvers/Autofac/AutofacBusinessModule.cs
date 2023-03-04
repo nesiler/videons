@@ -11,7 +11,7 @@ public class AutofacBusinessModule : Module
 {
     protected override void Load(ContainerBuilder builder)
     {
-        builder.RegisterType<ChannelManager>().As<IChannelService>();
+        builder.RegisterType<ChannelManager>().As<IChannelService>().InstancePerLifetimeScope();
         builder.RegisterType<EfChannelDal>().As<IChannelDal>();
 
         builder.RegisterType<VideoManager>().As<IVideoService>();
@@ -23,12 +23,13 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<PlaylistManager>().As<IPlaylistService>();
         builder.RegisterType<EfPlaylistDal>().As<IPlaylistDal>();
 
-        builder.RegisterType<UserManager>().As<IUserService>();
+        builder.RegisterType<UserManager>().As<IUserService>().InstancePerLifetimeScope();
         builder.RegisterType<EfUserDal>().As<IUserDal>();
 
         builder.RegisterType<AuthManager>().As<IAuthService>();
         builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
         builder.RegisterType<EfHistoryDal>().As<IHistoryDal>();
+
     }
 }
