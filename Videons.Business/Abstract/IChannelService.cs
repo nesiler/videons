@@ -1,3 +1,4 @@
+using Videons.Core.Entities;
 using Videons.Core.Utilities.Results;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
@@ -11,6 +12,7 @@ public interface IChannelService
     Channel GetByUserId(Guid userId);
     Channel GetByUserEmail(string email);
     IResult Add(ChannelDto channelDto);
+    IResult RegisterChannel(User user);
     IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
     IResult ChannelAction(Guid id, History history);
     IResult ChannelAddVideo(Guid id, Video video);

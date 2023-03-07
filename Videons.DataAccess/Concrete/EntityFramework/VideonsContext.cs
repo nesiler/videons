@@ -22,4 +22,35 @@ public class VideonsContext : DbContext
     public DbSet<PlaylistVideo> PlaylistVideo { get; set; }
     public DbSet<Subscription> Subscriptions { get; set; }
     public DbSet<Video> Videos { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // modelBuilder.Entity().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<User>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<OperationClaim>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<UserOperationClaim>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<Category>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<Channel>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<Comment>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<History>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<Playlist>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<PlaylistVideo>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<Subscription>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<Video>().HasQueryFilter(e => !e.IsDeleted);
+    }
+
+    //override savechanges for soft delete
+    public override int SaveChanges()
+    {
+        foreach (var entry in ChangeTracker.Entries())
+        {
+            var entity = entry.Entity;
+            if (entry.State != EntityState.Deleted) continue;
+            entry.State = EntityState.Modified;
+            entity.GetType().GetProperty("IsDeleted")?.SetValue(entity, true);
+            entity.GetType().GetProperty("DeletedAt")?.SetValue(entity, DateTime.Now.ToUniversalTime());
+        }
+
+        return base.SaveChanges();
+    }
 }

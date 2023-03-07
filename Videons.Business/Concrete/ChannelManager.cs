@@ -1,5 +1,7 @@
 using Videons.Business.Abstract;
+using Videons.Core.Entities;
 using Videons.Core.Utilities.Results;
+using Videons.Core.Utilities.Security.Hashing;
 using Videons.DataAccess.Abstract;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
@@ -32,8 +34,28 @@ public class ChannelManager : IChannelService
         var channel = new Channel
         {
             Name = channelDto.Name,
+            Slug = channelDto.Name + "-" + channelDto.UserId,
+            Description = $"My name is {channelDto.Name} and I'm a Videons user.",
             Verified = false,
             UserId = channelDto.UserId
+        };
+
+        if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");
+
+        // _channelDal.Update(channel);
+
+        return new SuccessResult("Channel created.");
+    }
+
+    public IResult RegisterChannel(User user)
+    {
+        var channel = new Channel
+        {
+            Name = $"{user.FirstName} {user.LastName}",
+            Slug = $"{user.FirstName}-{user.LastName}",
+            Description = $"My name is {user.FirstName} {user.LastName} and I'm a Videons user.",
+            Verified = false,
+            User = user
         };
 
         if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");

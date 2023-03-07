@@ -4,6 +4,7 @@ using Videons.Core.Entities.Concrete;
 using Videons.Core.Utilities.Results;
 using Videons.Core.Utilities.Security.Hashing;
 using Videons.DataAccess.Abstract;
+using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
 namespace Videons.Business.Concrete;
@@ -31,17 +32,22 @@ public class UserManager : IUserService
 
     public IResult Add(User user)
     {
-        var _channelService = new ChannelManager(_channelDal, this, null);
+        // var _channelService = new ChannelManager(_channelDal, this, null);
+        
         var userCreated = _userDal.Add(user);
-        var channel = new ChannelDto
+        var channel = new Channel
         {
             Name = user.FirstName + " " + user.LastName,
+            Slug = user.FirstName + "-" + user.LastName,
+            Description = $"My name is {user.FirstName} {user.LastName} and I'm a Videons user.",
+            Verified = false,
             UserId = user.Id
         };
 
-        var channelCreated = _channelService.Add(channel);
-
-        return userCreated && channelCreated.Success
+        // var channelCreated = _channelService.Add(channel);
+        var channelCreated = _channelDal.Add(channel);
+        // return userCreated && channelCreated.Success
+        return userCreated && channelCreated
             ? new SuccessResult("User created.")
             : new ErrorResult("User cannot created!");
 

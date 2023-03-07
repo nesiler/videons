@@ -19,7 +19,10 @@ public abstract class EntityBase
 
     //soft delete
     [Column(Order = 1600)] public bool IsDeleted { get; set; } = false;
-    
+
+    //delete time
+    [Column(Order = 1700)] public DateTime? DeletedAt { get; set; }
+
     public virtual string Describe(EventType eventType)
     {
         return null;
