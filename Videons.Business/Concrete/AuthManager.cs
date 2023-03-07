@@ -9,9 +9,9 @@ namespace Videons.Business.Concrete;
 
 public class AuthManager : IAuthService
 {
+    private readonly IChannelService _channelService;
     private readonly ITokenHelper _tokenHelper;
     private readonly IUserService _userService;
-    private readonly IChannelService _channelService;
 
     public AuthManager(IUserService userService, ITokenHelper tokenHelper, IChannelService channelService)
     {
@@ -34,7 +34,7 @@ public class AuthManager : IAuthService
             Status = true
         };
         // return _channelService.RegisterChannel(user).Success
-            return _userService.Add(user).Success
+        return _userService.Add(user).Success
             ? new SuccessDataResult<User>(user, "Registration successful")
             : new ErrorDataResult<User>(null, "Registration failed");
     }

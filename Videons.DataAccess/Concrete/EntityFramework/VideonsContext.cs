@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Videons.Core.Entities;
 using Videons.Core.Entities.Concrete;
 using Videons.Entities.Concrete;
@@ -40,17 +41,50 @@ public class VideonsContext : DbContext
     }
 
     //override savechanges for soft delete
-    public override int SaveChanges()
+    // public override int SaveChanges()
+    // {
+    //     foreach (var entry in ChangeTracker.Entries())
+    //     {
+    //         var entity = entry.Entity;
+    //         if (entry.State != EntityState.Deleted) continue;
+    //         entry.State = EntityState.Modified;
+    //         entry.CurrentValues["IsDeleted"] = true;
+    //         entry.CurrentValues["DeletedAt"] = DateTime.Now.ToUniversalTime();
+    //         // entity.GetType().GetProperty("IsDeleted")?.SetValue(entity, true);
+    //         // entity.GetType().GetProperty("DeletedAt")?.SetValue(entity, DateTime.Now.ToUniversalTime());
+    //     }
+    //
+    //     return base.SaveChanges();
+    // }
+
+    private void HandleDependent(EntityEntry entry)
+    {
+        // ...
+    }
+
+    private void ProcessEntities()
     {
         foreach (var entry in ChangeTracker.Entries())
         {
-            var entity = entry.Entity;
-            if (entry.State != EntityState.Deleted) continue;
-            entry.State = EntityState.Modified;
-            entity.GetType().GetProperty("IsDeleted")?.SetValue(entity, true);
-            entity.GetType().GetProperty("DeletedAt")?.SetValue(entity, DateTime.Now.ToUniversalTime());
+            foreach (var navigationEntry in entry.Navigations
+                         .Where(n => !n.Metadata.IsDependentToPrincipal()))
+            {
+                if (navigationEntry is CollectionEntry collectionEntry)
+                {
+                    foreach (var dependentEntry in collectionEntry.CurrentValue)
+                    {
+                        HandleDependent(Entry(dependentEntry));
+                    }
+                }
+                else
+                {
+                    var dependentEntry = navigationEntry.CurrentValue;
+                    if (dependentEntry != null)
+                    {
+                        HandleDependent(Entry(dependentEntry));
+                    }
+                }
+            }
         }
-
-        return base.SaveChanges();
     }
 }

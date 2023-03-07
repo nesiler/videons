@@ -33,7 +33,7 @@ public class UserManager : IUserService
     public IResult Add(User user)
     {
         // var _channelService = new ChannelManager(_channelDal, this, null);
-        
+
         var userCreated = _userDal.Add(user);
         var channel = new Channel
         {
