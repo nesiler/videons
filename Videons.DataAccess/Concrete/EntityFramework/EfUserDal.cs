@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Videons.Core.DataAccess.EntityFramework;
+using Videons.Core.Entities;
 using Videons.Core.Entities.Concrete;
 using Videons.DataAccess.Abstract;
 using Videons.Entities.Concrete;

@@ -13,5 +13,5 @@ public class Subscription : EntityBase
 
     public virtual Channel Channel { get; set; }
 
-    public bool Notification { get; set; }
+    public bool Notification { get; set; } = false;
 }

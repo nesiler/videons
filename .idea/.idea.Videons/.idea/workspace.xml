@@ -10,13 +10,31 @@
   <component name="ChangeListManager">
     <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IPlaylistService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IPlaylistService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/AutoMapper/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/AutoMapper/AutoMapperProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/CategoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/CategoryManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/VideoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/VideoManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Entities/Concrete/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Entities/Concrete/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Entities/EntityBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Entities/EntityBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/ITokenHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/ITokenHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/JwtHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Utilities/Security/Jwt/JwtHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IUserDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Playlist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Playlist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Subscription.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Subscription.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Video.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Video.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/DTOs/UserForLoginDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/UserForLoginDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/DTOs/UserForRegisterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/UserForRegisterDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +129,8 @@
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.2777778&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.15566365&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -166,6 +185,10 @@
       <workItem from="1677720499244" duration="4299000" />
       <workItem from="1677726520207" duration="22611000" />
       <workItem from="1677803490035" duration="2180000" />
+      <workItem from="1678013202057" duration="1268000" />
+      <workItem from="1678017124467" duration="818000" />
+      <workItem from="1678017964848" duration="1697000" />
+      <workItem from="1678110078830" duration="4496000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1677097172285</created>

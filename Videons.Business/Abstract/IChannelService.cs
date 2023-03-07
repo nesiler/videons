@@ -16,5 +16,4 @@ public interface IChannelService
     IResult ChannelAddVideo(Guid id, Video video);
     IResult ChannelRemoveVideo(Guid id, Video video);
     IResult Delete(Guid id);
-
 }

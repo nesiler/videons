@@ -1,8 +1,8 @@
 using Videons.Business.Abstract;
+using Videons.Core.Entities;
 using Videons.Core.Utilities.Results;
 using Videons.Core.Utilities.Security.Hashing;
 using Videons.Core.Utilities.Security.Jwt;
-using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 
 namespace Videons.Business.Concrete;

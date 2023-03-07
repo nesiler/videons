@@ -60,7 +60,7 @@ public class CategoryManager : ICategoryService
     {
         var categoryResult = GetById(id);
         if (!categoryResult.Success) return new ErrorResult(categoryResult.Message);
-        
+
         var category = categoryResult.Data;
         return _categoryDal.Delete(category)
             ? new SuccessResult("Category deleted.")

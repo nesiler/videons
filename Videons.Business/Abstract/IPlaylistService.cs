@@ -12,5 +12,4 @@ public interface IPlaylistService
     IResult Add(PlaylistDto playlistDto);
     IResult Update(Guid id, PlaylistUpdateDto playlistUpdateDto);
     IResult Delete(Guid id);
-    
 }

@@ -10,7 +10,6 @@ public abstract class EntityBase
     [Key]
     public Guid Id { get; set; }
 
-
     [Column(Order = 1200)] public DateTime? CreatedAt { get; set; }
     [Column(Order = 1300)] public DateTime? UpdatedAt { get; set; }
 
@@ -18,6 +17,9 @@ public abstract class EntityBase
 
     [Column(Order = 1500)] public Guid? UpdatedBy { get; set; }
 
+    //soft delete
+    [Column(Order = 1600)] public bool IsDeleted { get; set; } = false;
+    
     public virtual string Describe(EventType eventType)
     {
         return null;

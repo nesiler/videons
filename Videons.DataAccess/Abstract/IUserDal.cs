@@ -1,6 +1,6 @@
 using Videons.Core.DataAccess;
+using Videons.Core.Entities;
 using Videons.Core.Entities.Concrete;
-using Videons.Entities.Concrete;
 
 namespace Videons.DataAccess.Abstract;
 

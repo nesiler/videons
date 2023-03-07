@@ -1,4 +1,5 @@
 using AutoMapper;
+using Videons.Core.Entities;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
 

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Videons.Core.Entities;
 using Videons.Core.Entities.Concrete;
 using Videons.Entities.Concrete;
 

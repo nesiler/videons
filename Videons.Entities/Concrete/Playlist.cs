@@ -17,7 +17,7 @@ public class Playlist : EntityBase
     public virtual Channel Channel { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public PlaylistVisibility Visibility { get; set; }
+    public PlaylistVisibility Visibility { get; set; } = PlaylistVisibility.Unlisted;
 
-    public ICollection<PlaylistVideo> PlaylistVideos { get; set; }
+    public ICollection<PlaylistVideo> PlaylistVideos { get; set; } = new HashSet<PlaylistVideo>();
 }
