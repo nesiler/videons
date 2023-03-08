@@ -1,5 +1,6 @@
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Query;
 using Videons.Core.Entities;
 using Videons.Core.Entities.Concrete;
 using Videons.Entities.Concrete;
@@ -20,25 +21,104 @@ public class VideonsContext : DbContext
     public DbSet<Comment> Comments { get; set; }
     public DbSet<History> History { get; set; }
     public DbSet<Playlist> Playlists { get; set; }
-    public DbSet<PlaylistVideo> PlaylistVideo { get; set; }
     public DbSet<Subscription> Subscriptions { get; set; }
     public DbSet<Video> Videos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // modelBuilder.Entity().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<User>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<OperationClaim>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<UserOperationClaim>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<Category>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<Channel>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<Comment>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<History>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<Playlist>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<PlaylistVideo>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<Subscription>().HasQueryFilter(e => !e.IsDeleted);
-        modelBuilder.Entity<Video>().HasQueryFilter(e => !e.IsDeleted);
-    }
+        Expression<Func<EntityBase, bool>> filterExpr = bm => !bm.IsDeleted;
+        foreach (var entity in modelBuilder.Model.GetEntityTypes())
+            // check if current entity type is child of BaseModel
+            if (entity.ClrType.IsAssignableTo(typeof(EntityBase)))
+            {
+                // modify expression to handle correct child type
+                var parameter = Expression.Parameter(entity.ClrType);
+                var body = ReplacingExpressionVisitor.Replace(filterExpr.Parameters.First(), parameter,
+                    filterExpr.Body);
+                var lambdaExpression = Expression.Lambda(body, parameter);
+
+                // set filter
+                entity.SetQueryFilter(lambdaExpression);
+            }
+
+        #region Builders 
+        //channel user one to many
+            modelBuilder.Entity<Channel>()
+                .HasOne(c => c.User)
+                .WithMany()
+                .HasForeignKey(c => c.UserId);
+
+            //comment video one to many
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.Video)
+                .WithMany(d => d.Comments)
+                .HasForeignKey(c => c.VideoId);
+
+            //comment channel one to many
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.Channel)
+                .WithMany(c => c.Comments)
+                .HasForeignKey(c => c.ChannelId);
+
+            //history channel one to many
+            modelBuilder.Entity<History>()
+                .HasOne(h => h.Channel)
+                .WithMany(c => c.Histories)
+                .HasForeignKey(h => h.ChannelId);
+
+            //history video one to many
+            modelBuilder.Entity<History>()
+                .HasOne(h => h.Video)
+                .WithMany()
+                .HasForeignKey(h => h.VideoId);
+
+            //subscription channel one to many
+            modelBuilder.Entity<Subscription>()
+                .HasOne(s => s.Channel)
+                .WithMany(c => c.Subscribers)
+                .HasForeignKey(s => s.ChannelId);
+
+            //subscription channel one to many
+            modelBuilder.Entity<Subscription>()
+                .HasOne(s => s.Subscriber)
+                .WithMany(c => c.Subscriptions)
+                .HasForeignKey(s => s.SubscriberId);
+
+            //playlist channel one to many
+            modelBuilder.Entity<Playlist>()
+                .HasOne(p => p.Channel)
+                .WithMany(c => c.Playlists)
+                .HasForeignKey(p => p.ChannelId);
+
+            //playlist video many to many
+            modelBuilder.Entity<PlaylistVideo>()
+                .HasKey(pv => new { pv.PlaylistId, pv.VideoId });
+            modelBuilder.Entity<PlaylistVideo>()
+                .HasOne(pv => pv.Playlist)
+                .WithMany(p => p.PlaylistVideos)
+                .HasForeignKey(pv => pv.PlaylistId);
+            modelBuilder.Entity<PlaylistVideo>()
+                .HasOne(pv => pv.Video)
+                .WithMany(v => v.PlaylistVideos)
+                .HasForeignKey(pv => pv.VideoId);
+
+            //video category one to many
+            modelBuilder.Entity<Video>()
+                .HasOne(v => v.Category)
+                .WithMany(c => c.Videos)
+                .HasForeignKey(v => v.CategoryId);
+
+            //video channel one to many
+            modelBuilder.Entity<Video>()
+                .HasOne(v => v.Channel)
+                .WithMany(c => c.Videos)
+                .HasForeignKey(v => v.ChannelId);
+            #endregion
+        }
+    
+   
+
+    
 
     //override savechanges for soft delete
     // public override int SaveChanges()

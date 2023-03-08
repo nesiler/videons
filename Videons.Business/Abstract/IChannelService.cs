@@ -12,9 +12,8 @@ public interface IChannelService
     Channel GetByUserId(Guid userId);
     Channel GetByUserEmail(string email);
     IResult Add(ChannelDto channelDto);
-    IResult RegisterChannel(User user);
     IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
-    IResult ChannelAction(Guid id, History history);
+    IResult Watch(Guid id, History history);
     IResult ChannelAddVideo(Guid id, Video video);
     IResult ChannelRemoveVideo(Guid id, Video video);
     IResult Delete(Guid id);

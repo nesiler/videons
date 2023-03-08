@@ -9,20 +9,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/Configurations/EntityConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/Configurations/EntityConfiguration.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Videons.DataAccess.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Videons.DataAccess.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/History.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/History.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Playlist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Playlist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/PlaylistVideo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/PlaylistVideo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Subscription.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Subscription.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Video.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Video.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +44,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/09c2b57cab4448c6ad6d8a0e62654d474c8400/53/cad48417/Expression.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d01c6c41dcc476abae30f1fa0b851de6000/0f/bb476234/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/8a/9efbf3ed/SecurityKey.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5504757e04a54770adb1180b0cb9adfaf0d88/c4/b0950d70/TokenValidationParameters.cs" root0="SKIP_HIGHLIGHTING" />
@@ -64,13 +76,17 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1e84bc8f779d85eecedae89fadb5dfa8aec20ca7ee023e593fc63343db49e/MapperConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bebd253e21dcf766929bfdfd74615bfe46e6e1693b289273dbdb82152893/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c197ef9ddaaf18a22eb72595ceb984d9dc89032fa86e66c26edbb60e476bd/HttpsRedirectionBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c59f301bfbd62484282a3ff6385331c04e958b2034df4e8b961958af596e2862/PropertyBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c854e9701da0dbfde76caa7f37743082eb91e1bc26523d7ff25ff4cce123f/ConfigurationManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d1f68ef86315497c7b39ddb155d5cf3ace964abca69857f9943cd58479799/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4f98ebdd878db4fbd98872756eb7be6ad9e468fe5cd6b16385d8c4993109a/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc66e6d4ddcd4ed6995ee5198eb13742b55800/_efc3c/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dcedbc87754f258c5cbaf81957c25226a51ba1fd897ccb6a3d357ace4202/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74d71dba7c925c5924d4deec63ced5d22eafcd5e4356b229f51d6bc642e1/PropertyBuilder`.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8383eafdb3fcfdc3625b4caef3730d5769bb177bac72360812c9f5bb4a78/ModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ea80837fcbc25d7a83f1a42ddc197b3c3063604ab5f77253502065f75b34/ModuleRegistrationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/edc076456757744f30b88850e048f669868d9170a6a44aa8a59e8d27d11409e/Channel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f561e8541f7742b19e0282d5571a788632000/_165ad/DatabaseGeneratedOption.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9b332439474fbff79649d69152eacac216c62686568150bd1f6ed15f9759/AuthorizationMiddlewareResultHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../BookStore/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/ICategoryService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -179,7 +195,8 @@
       <workItem from="1678017964848" duration="1697000" />
       <workItem from="1678110078830" duration="4496000" />
       <workItem from="1678120832246" duration="15645000" />
-      <workItem from="1678234301225" duration="727000" />
+      <workItem from="1678234301225" duration="5886000" />
+      <workItem from="1678246338328" duration="10770000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1677097172285</created>

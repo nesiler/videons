@@ -15,9 +15,10 @@ public class EfVideoDal : EfEntityRepositoryBase<Video, VideonsContext>, IVideoD
     {
         var video = Context.Videos.FirstOrDefault(v => v.Id == videoId);
         video.Views++;
-        video.UpdatedAt = DateTime.Now.ToUniversalTime();
+        
         var entry = Context.Entry(video);
         entry.State = EntityState.Modified;
+        
         return Context.SaveChanges() > 0;
     }
 }

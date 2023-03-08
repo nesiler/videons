@@ -8,6 +8,7 @@ public interface ICategoryService
 {
     IDataResult<IList<CategoryDto>> GetList();
     IDataResult<Category> GetById(Guid id);
+    IDataResult<Category> GetByName(string name);
     IResult Add(CategoryCreateUpdateDto categoryDto);
     IResult Update(Guid id, CategoryCreateUpdateDto categoryDto);
     IResult Delete(Guid id);

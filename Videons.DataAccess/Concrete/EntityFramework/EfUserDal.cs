@@ -9,11 +9,10 @@ namespace Videons.DataAccess.Concrete.EntityFramework;
 
 public class EfUserDal : EfEntityRepositoryBase<User, VideonsContext>, IUserDal
 {
-    private readonly IChannelDal _channelDal;
+    // private readonly IChannelDal _channelDal;
 
     public EfUserDal(VideonsContext context) : base(context)
     {
-        _channelDal = new EfChannelDal(context);
     }
 
     public List<OperationClaim> GetClaims(User user)
@@ -26,20 +25,20 @@ public class EfUserDal : EfEntityRepositoryBase<User, VideonsContext>, IUserDal
         return result.ToList();
     }
 
-    public bool CreateNewUser(User user)
-    {
-        user.CreatedAt = DateTime.Now.ToUniversalTime();
-
-        var newUserEntry = Context.Entry(user);
-        newUserEntry.State = EntityState.Added;
-
-        var channel = new Channel
-        {
-            Name = user.FirstName + " " + user.LastName,
-            Verified = false,
-            UserId = user.Id
-        };
-
-        return _channelDal.Add(channel);
-    }
+    // public bool CreateNewUser(User user)
+    // {
+    //     user.CreatedAt = DateTime.Now.ToUniversalTime();
+    //
+    //     var newUserEntry = Context.Entry(user);
+    //     newUserEntry.State = EntityState.Added;
+    //
+    //     var channel = new Channel
+    //     {
+    //         Name = user.FirstName + " " + user.LastName,
+    //         Verified = false,
+    //         UserId = user.Id
+    //     };
+    //
+    //     return _channelDal.Add(channel);
+    // }
 }

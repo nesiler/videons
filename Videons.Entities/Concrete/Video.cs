@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using Videons.Core.Entities;
 
 namespace Videons.Entities.Concrete;
@@ -12,21 +11,16 @@ public enum VideoVisibility
 
 public class Video : EntityBase
 {
-    [ForeignKey("Channel")] public Guid ChannelId { get; set; }
-
+    public Guid ChannelId { get; set; }
     public virtual Channel Channel { get; set; }
-
-    [ForeignKey("Category")] public Guid CategoryId { get; set; }
-
+    public Guid CategoryId { get; set; }
     public virtual Category Category { get; set; }
-
     public string Title { get; set; }
     public string Description { get; set; }
     public string StreamId { get; set; } // cloud stream id
     public VideoVisibility Visibility { get; set; } = VideoVisibility.Unlisted;
     public DateTime PublishDate { get; set; }
     public uint Views { get; set; }
-
     public ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
     public ICollection<PlaylistVideo> PlaylistVideos { get; set; } = new HashSet<PlaylistVideo>();
 }

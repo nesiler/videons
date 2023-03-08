@@ -45,25 +45,7 @@ public class ChannelManager : IChannelService
 
         return new SuccessResult("Channel created.");
     }
-
-    public IResult RegisterChannel(User user)
-    {
-        var channel = new Channel
-        {
-            Name = $"{user.FirstName} {user.LastName}",
-            Slug = $"{user.FirstName}-{user.LastName}",
-            Description = $"My name is {user.FirstName} {user.LastName} and I'm a Videons user.",
-            Verified = false,
-            User = user
-        };
-
-        if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");
-
-        // _channelDal.Update(channel);
-
-        return new SuccessResult("Channel created.");
-    }
-
+    
     public IResult Update(Guid id, ChannelUpdateDto channelUpdateDto)
     {
         var channel = GetById(id);
@@ -76,6 +58,11 @@ public class ChannelManager : IChannelService
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");
+    }
+
+    public IResult Watch(Guid id, History history)
+    {
+        throw new NotImplementedException();
     }
 
     public IResult ChannelAction(Guid id, History history)

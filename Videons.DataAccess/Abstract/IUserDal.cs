@@ -7,5 +7,5 @@ namespace Videons.DataAccess.Abstract;
 public interface IUserDal : IEntityRepository<User>
 {
     List<OperationClaim> GetClaims(User user);
-    bool CreateNewUser(User user);
+    // bool CreateNewUser(User user);
 }
