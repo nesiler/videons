@@ -2,7 +2,7 @@ using Videons.Core.Entities;
 
 namespace Videons.Entities.Concrete;
 
-public class PlaylistVideo : EntityBase
+public class PlaylistVideo
 {
     public Guid PlaylistId { get; set; }
     public virtual Playlist Playlist { get; set; }

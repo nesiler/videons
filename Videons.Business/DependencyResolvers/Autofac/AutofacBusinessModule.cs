@@ -14,7 +14,7 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<ChannelManager>().As<IChannelService>().InstancePerLifetimeScope();
         builder.RegisterType<EfChannelDal>().As<IChannelDal>();
 
-        builder.RegisterType<VideoManager>().As<IVideoService>();
+        builder.RegisterType<VideoManager>().As<IVideoService>().InstancePerLifetimeScope();
         builder.RegisterType<EfVideoDal>().As<IVideoDal>();
 
         builder.RegisterType<CategoryManager>().As<ICategoryService>();

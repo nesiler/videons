@@ -41,84 +41,83 @@ public class VideonsContext : DbContext
                 entity.SetQueryFilter(lambdaExpression);
             }
 
-        #region Builders 
+        #region Builders
+
         //channel user one to many
-            modelBuilder.Entity<Channel>()
-                .HasOne(c => c.User)
-                .WithMany()
-                .HasForeignKey(c => c.UserId);
+        modelBuilder.Entity<Channel>()
+            .HasOne(c => c.User)
+            .WithMany()
+            .HasForeignKey(c => c.UserId);
 
-            //comment video one to many
-            modelBuilder.Entity<Comment>()
-                .HasOne(c => c.Video)
-                .WithMany(d => d.Comments)
-                .HasForeignKey(c => c.VideoId);
+        //comment video one to many
+        modelBuilder.Entity<Comment>()
+            .HasOne(c => c.Video)
+            .WithMany(d => d.Comments)
+            .HasForeignKey(c => c.VideoId);
 
-            //comment channel one to many
-            modelBuilder.Entity<Comment>()
-                .HasOne(c => c.Channel)
-                .WithMany(c => c.Comments)
-                .HasForeignKey(c => c.ChannelId);
+        //comment channel one to many
+        modelBuilder.Entity<Comment>()
+            .HasOne(c => c.Channel)
+            .WithMany(c => c.Comments)
+            .HasForeignKey(c => c.ChannelId);
 
-            //history channel one to many
-            modelBuilder.Entity<History>()
-                .HasOne(h => h.Channel)
-                .WithMany(c => c.Histories)
-                .HasForeignKey(h => h.ChannelId);
+        //history channel one to many
+        modelBuilder.Entity<History>()
+            .HasOne(h => h.Channel)
+            .WithMany(c => c.Histories)
+            .HasForeignKey(h => h.ChannelId);
 
-            //history video one to many
-            modelBuilder.Entity<History>()
-                .HasOne(h => h.Video)
-                .WithMany()
-                .HasForeignKey(h => h.VideoId);
+        //history video one to many
+        modelBuilder.Entity<History>()
+            .HasOne(h => h.Video)
+            .WithMany()
+            .HasForeignKey(h => h.VideoId);
 
-            //subscription channel one to many
-            modelBuilder.Entity<Subscription>()
-                .HasOne(s => s.Channel)
-                .WithMany(c => c.Subscribers)
-                .HasForeignKey(s => s.ChannelId);
+        //subscription channel one to many
+        modelBuilder.Entity<Subscription>()
+            .HasOne(s => s.Channel)
+            .WithMany(c => c.Subscribers)
+            .HasForeignKey(s => s.ChannelId);
 
-            //subscription channel one to many
-            modelBuilder.Entity<Subscription>()
-                .HasOne(s => s.Subscriber)
-                .WithMany(c => c.Subscriptions)
-                .HasForeignKey(s => s.SubscriberId);
+        //subscription channel one to many
+        modelBuilder.Entity<Subscription>()
+            .HasOne(s => s.Subscriber)
+            .WithMany(c => c.Subscriptions)
+            .HasForeignKey(s => s.SubscriberId);
 
-            //playlist channel one to many
-            modelBuilder.Entity<Playlist>()
-                .HasOne(p => p.Channel)
-                .WithMany(c => c.Playlists)
-                .HasForeignKey(p => p.ChannelId);
+        //playlist channel one to many
+        modelBuilder.Entity<Playlist>()
+            .HasOne(p => p.Channel)
+            .WithMany(c => c.Playlists)
+            .HasForeignKey(p => p.ChannelId);
 
-            //playlist video many to many
-            modelBuilder.Entity<PlaylistVideo>()
-                .HasKey(pv => new { pv.PlaylistId, pv.VideoId });
-            modelBuilder.Entity<PlaylistVideo>()
-                .HasOne(pv => pv.Playlist)
-                .WithMany(p => p.PlaylistVideos)
-                .HasForeignKey(pv => pv.PlaylistId);
-            modelBuilder.Entity<PlaylistVideo>()
-                .HasOne(pv => pv.Video)
-                .WithMany(v => v.PlaylistVideos)
-                .HasForeignKey(pv => pv.VideoId);
+        //playlist video many to many
+        modelBuilder.Entity<PlaylistVideo>()
+            .HasKey(pv => new { pv.PlaylistId, pv.VideoId });
+        modelBuilder.Entity<PlaylistVideo>()
+            .HasOne(pv => pv.Playlist)
+            .WithMany(p => p.PlaylistVideos)
+            .HasForeignKey(pv => pv.PlaylistId);
+        modelBuilder.Entity<PlaylistVideo>()
+            .HasOne(pv => pv.Video)
+            .WithMany(v => v.PlaylistVideos)
+            .HasForeignKey(pv => pv.VideoId);
 
-            //video category one to many
-            modelBuilder.Entity<Video>()
-                .HasOne(v => v.Category)
-                .WithMany(c => c.Videos)
-                .HasForeignKey(v => v.CategoryId);
+        //video category one to many
+        modelBuilder.Entity<Video>()
+            .HasOne(v => v.Category)
+            .WithMany(c => c.Videos)
+            .HasForeignKey(v => v.CategoryId);
 
-            //video channel one to many
-            modelBuilder.Entity<Video>()
-                .HasOne(v => v.Channel)
-                .WithMany(c => c.Videos)
-                .HasForeignKey(v => v.ChannelId);
-            #endregion
-        }
-    
-   
+        //video channel one to many
+        modelBuilder.Entity<Video>()
+            .HasOne(v => v.Channel)
+            .WithMany(c => c.Videos)
+            .HasForeignKey(v => v.ChannelId);
 
-    
+        #endregion
+    }
+
 
     //override savechanges for soft delete
     // public override int SaveChanges()

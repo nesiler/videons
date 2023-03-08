@@ -8,20 +8,30 @@ namespace Videons.Business.Concrete;
 
 public class VideoManager : IVideoService
 {
-    private readonly IAuthService _authService;
     private readonly IChannelService _channelService;
-    private readonly IUserService _userService;
     private readonly IVideoDal _videoDal;
-
+    
     public VideoManager(IVideoDal videoDal, IChannelService channelService)
     {
-        _channelService = channelService;
         _videoDal = videoDal;
+        _channelService = channelService;
     }
-
+    
     public IDataResult<IList<Video>> GetList()
     {
         var videos = _videoDal.GetList();
+        return new SuccessDataResult<IList<Video>>(videos);
+    }
+
+    public IDataResult<IList<Video>> GetListByChannelId(Guid channelId)
+    {
+        var videos = _videoDal.GetList(v => v.ChannelId == channelId);
+        return new SuccessDataResult<IList<Video>>(videos);
+    }
+
+    public IDataResult<IList<Video>> GetListByCategoryId(Guid categoryId)
+    {
+        var videos = _videoDal.GetList(v => v.CategoryId == categoryId);
         return new SuccessDataResult<IList<Video>>(videos);
     }
 
@@ -72,7 +82,7 @@ public class VideoManager : IVideoService
         if (video == null) return null;
 
         var channel = _channelService.GetById(channelId);
-        // if (channel == null) return null;
+        if (channel == null) return null;
 
         if (video.Visibility == VideoVisibility.Private && video.ChannelId != channel.Id) return null;
         _videoDal.Watch(videoId);
@@ -81,10 +91,10 @@ public class VideoManager : IVideoService
         {
             ChannelId = channel.Id,
             VideoId = video.Id,
-            Time = 123
+            Time = (short) new Random().Next(0, 100)
         };
 
-        _channelService.ChannelAction(channel.Id, history);
+        _channelService.Watch(channel.Id, history);
 
         return video;
     }

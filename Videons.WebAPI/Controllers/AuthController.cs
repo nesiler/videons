@@ -70,6 +70,19 @@ public class AuthController : ControllerBase
             ? Ok(result)
             : BadRequest(result);
     }
+    
+    [HttpPut("update-profile")]
+    [Authorize]
+    public IActionResult UpdateProfile([FromBody] UserUpdateDto userUpdateDto)
+    {
+        var currentUser = HttpContext.User;
+        var userId = new Guid(currentUser.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty);
+
+        var result = _userService.UpdateProfile(userId, userUpdateDto);
+        return result.Success
+            ? Ok(result)
+            : BadRequest(result);
+    }
 
     [HttpDelete("delete-account")]
     [Authorize]

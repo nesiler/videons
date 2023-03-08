@@ -14,7 +14,7 @@ public interface IChannelService
     IResult Add(ChannelDto channelDto);
     IResult Update(Guid id, ChannelUpdateDto channelUpdateDto);
     IResult Watch(Guid id, History history);
-    IResult ChannelAddVideo(Guid id, Video video);
-    IResult ChannelRemoveVideo(Guid id, Video video);
+    IResult ChannelAddVideo(Guid channelId, Guid videoId);
+    IResult ChannelRemoveVideo(Guid channelId, Guid videoId);
     IResult Delete(Guid id);
 }

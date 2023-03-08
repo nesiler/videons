@@ -34,6 +34,26 @@ public class VideosController : ControllerBase
             ? Ok(result.Data)
             : BadRequest(result.Message);
     }
+    
+    [HttpGet("channel/{id}")]
+    public IActionResult GetListByChannelId(Guid id)
+    {
+        var result = _videoService.GetListByChannelId(id);
+
+        return result.Success
+            ? Ok(result.Data)
+            : BadRequest(result.Message);
+    }
+    
+    [HttpGet("category/{id}")]
+    public IActionResult GetListByCategoryId(Guid id)
+    {
+        var result = _videoService.GetListByCategoryId(id);
+
+        return result.Success
+            ? Ok(result.Data)
+            : BadRequest(result.Message);
+    }
 
     [HttpGet("{id}")]
     public IActionResult GetById(Guid id)
@@ -50,6 +70,28 @@ public class VideosController : ControllerBase
     public IActionResult Add([FromBody] VideoDto videoDto)
     {
         var result = _videoService.Add(videoDto);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+    
+    [HttpPost("channel/{id}/video/{videoId}")]
+    [Authorize]
+    public IActionResult ChannelAddVideo(Guid id, Guid videoId)
+    {
+        var result = _channelService.ChannelAddVideo(id, videoId);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+    
+    [HttpDelete("channel/{id}/video/{videoId}")]
+    [Authorize]
+    public IActionResult ChannelDeleteVideo(Guid id, Guid videoId)
+    {
+        var result = _channelService.ChannelRemoveVideo(id, videoId);
 
         return result.Success
             ? Ok(result.Message)
@@ -82,4 +124,16 @@ public class VideosController : ControllerBase
             ? Ok(video)
             : NotFound();
     }
+    
+    [HttpDelete("{id}")]
+    [Authorize]
+    public IActionResult Delete(Guid id)
+    {
+        var result = _videoService.Delete(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+    
 }

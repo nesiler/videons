@@ -34,6 +34,15 @@ public class CategoryManager : ICategoryService
             : new SuccessDataResult<Category>(category);
     }
 
+    public IDataResult<Category> GetByName(string name)
+    {
+        var category = _categoryDal.Get(c => c.Name == name);
+
+        return category == null
+            ? new ErrorDataResult<Category>(null, "Category cannot found!")
+            : new SuccessDataResult<Category>(category);
+    }
+
     public IResult Add(CategoryCreateUpdateDto categoryDto)
     {
         var category = _mapper.Map<Category>(categoryDto);

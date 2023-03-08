@@ -67,4 +67,27 @@ public class PlaylistsController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
+
+    [HttpDelete("{id}")]
+    [Authorize]
+    public IActionResult Delete(Guid id)
+    {
+        var result = _playlistService.Delete(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+
+    [HttpPost("{id}/videos/{videoId}")]
+    [Authorize]
+    public IActionResult AddVideo(Guid id, Guid videoId)
+    {
+        var result = _playlistService.AddVideo(id, videoId);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+
+    }
 }

@@ -5,4 +5,5 @@ namespace Videons.DataAccess.Abstract;
 
 public interface IPlaylistDal : IEntityRepository<Playlist>
 {
+    public bool AddVideoToPlaylist(PlaylistVideo playlistVideo);
 }

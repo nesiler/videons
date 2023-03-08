@@ -26,10 +26,30 @@ public class ChannelsController : ControllerBase
             : BadRequest(result.Message);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("id/{id}")]
     public IActionResult GetById(Guid id)
     {
         var channel = _channelService.GetById(id);
+
+        return channel != null
+            ? Ok(channel)
+            : NotFound();
+    }
+    
+    [HttpGet("user/{userId}")]
+    public IActionResult GetByUserId(Guid userId)
+    {
+        var channel = _channelService.GetByUserId(userId);
+
+        return channel != null
+            ? Ok(channel)
+            : NotFound();
+    }
+    
+    [HttpGet("email/{email}")]
+    public IActionResult GetByUserEmail([FromBody] string email)
+    {
+        var channel = _channelService.GetByUserEmail(email);
 
         return channel != null
             ? Ok(channel)
@@ -47,7 +67,7 @@ public class ChannelsController : ControllerBase
             : BadRequest(result.Message);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("update/{id}")]
     [Authorize]
     public IActionResult Update(Guid id, ChannelUpdateDto channelUpdateDto)
     {
@@ -57,4 +77,18 @@ public class ChannelsController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
+    
+    
+    [HttpDelete("delete-channel/{id}")]
+    [Authorize]
+    public IActionResult Delete(Guid id)
+    {
+        var result = _channelService.Delete(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+    
+    
 }

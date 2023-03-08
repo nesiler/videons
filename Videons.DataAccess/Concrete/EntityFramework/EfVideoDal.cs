@@ -15,10 +15,10 @@ public class EfVideoDal : EfEntityRepositoryBase<Video, VideonsContext>, IVideoD
     {
         var video = Context.Videos.FirstOrDefault(v => v.Id == videoId);
         video.Views++;
-        
+
         var entry = Context.Entry(video);
         entry.State = EntityState.Modified;
-        
+
         return Context.SaveChanges() > 0;
     }
 }

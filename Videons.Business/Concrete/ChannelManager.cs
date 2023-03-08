@@ -10,14 +10,14 @@ namespace Videons.Business.Concrete;
 public class ChannelManager : IChannelService
 {
     private readonly IChannelDal _channelDal;
-    private readonly IHistoryDal _historyDal;
     private readonly IUserService _userService;
+    private readonly IVideoDal _videoDal;
 
-    public ChannelManager(IChannelDal channelDal, IUserService userService, IHistoryDal historyDal)
+    public ChannelManager(IChannelDal channelDal, IUserService userService, IVideoDal videoDal)
     {
         _channelDal = channelDal;
         _userService = userService;
-        _historyDal = historyDal;
+        _videoDal = videoDal;
     }
 
     public Channel GetByUserEmail(string email)
@@ -27,21 +27,18 @@ public class ChannelManager : IChannelService
 
     public IResult Add(ChannelDto channelDto)
     {
-        var userExist = _userService.GetById(channelDto.UserId);
-        if (userExist == null) return new ErrorResult("Invalid user");
+        if ( _userService.GetById(channelDto.UserId) == null) return new ErrorResult("Invalid user");
 
         var channel = new Channel
         {
             Name = channelDto.Name,
-            Slug = channelDto.Name + "-" + channelDto.UserId,
+            Slug = channelDto.Name + "_" + channelDto.UserId,
             Description = $"My name is {channelDto.Name} and I'm a Videons user.",
             Verified = false,
             UserId = channelDto.UserId
         };
 
         if (!_channelDal.Add(channel)) return new ErrorResult("Channel cannot created!");
-
-        // _channelDal.Update(channel);
 
         return new SuccessResult("Channel created.");
     }
@@ -53,6 +50,8 @@ public class ChannelManager : IChannelService
         if (channel == null) return new ErrorResult("Channel cannot found!");
 
         channel.Name = channelUpdateDto.Name;
+        channel.Slug = channelUpdateDto.Name + "_" + channel.UserId;
+        channel.Description = channelUpdateDto.Description;
         channel.ImagePath = channelUpdateDto.ImagePath;
 
         return _channelDal.Update(channel)
@@ -62,46 +61,50 @@ public class ChannelManager : IChannelService
 
     public IResult Watch(Guid id, History history)
     {
-        throw new NotImplementedException();
-    }
-
-    public IResult ChannelAction(Guid id, History history)
-    {
         var channel = GetById(id);
-
         if (channel == null) return new ErrorResult("Channel cannot found!");
-        _historyDal.Add(history);
+        
+        channel.Histories.Add(history);
 
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");
     }
 
-    public IResult ChannelAddVideo(Guid id, Video video)
-    {
-        var channel = GetById(id);
 
+    public IResult ChannelAddVideo(Guid channelId, Guid videoId)
+    {
+        var channel = GetById(channelId);
         if (channel == null) return new ErrorResult("Channel cannot found!");
 
+        var video = _videoDal.Get(v => v.Id == videoId);
         channel.Videos.Add(video);
 
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");
     }
-
-    public IResult ChannelRemoveVideo(Guid id, Video video)
+    
+    public IResult ChannelRemoveVideo(Guid channelId, Guid videoId)
     {
-        //TODO
-        throw new NotImplementedException();
+        var channel = GetById(channelId);
+        if (channel == null) return new ErrorResult("Channel cannot found!");
+        
+        var video = _videoDal.Get(v => v.Id == videoId);
+
+        if(!channel.Videos.Remove(video)) return new ErrorResult("Video cannot removed!");
+
+        return _channelDal.Update(channel)
+            ? new SuccessResult("Channel updated.")
+            : new ErrorResult("Channel cannot updated!");
     }
+    
 
     public IResult Delete(Guid id)
     {
         var channel = GetById(id);
-
         if (channel == null) return new ErrorResult("Channel cannot found!");
-
+        
         return _channelDal.Delete(channel)
             ? new SuccessResult("Channel deleted.")
             : new ErrorResult("Channel cannot deleted!");

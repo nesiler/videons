@@ -32,9 +32,8 @@ public class UserManager : IUserService
 
     public IResult Add(User user)
     {
-        // var _channelService = new ChannelManager(_channelDal, this, null);
-
-        var userCreated = _userDal.Add(user);
+        if(_userDal.Add(user) == null) return new ErrorResult("User cannot created!");
+        
         var channel = new Channel
         {
             Name = user.FirstName + " " + user.LastName,
@@ -43,17 +42,9 @@ public class UserManager : IUserService
             Verified = false,
             UserId = user.Id
         };
+        if(_channelDal.Add(channel) == null) return new ErrorResult("Channel cannot created!");
 
-        // var channelCreated = _channelService.Add(channel);
-        var channelCreated = _channelDal.Add(channel);
-        // return userCreated && channelCreated.Success
-        return userCreated && channelCreated
-            ? new SuccessResult("User created.")
-            : new ErrorResult("User cannot created!");
-
-        // return _userDal.CreateNewUser(user)
-        //     ? new SuccessResult()
-        //     : new ErrorResult();
+        return new SuccessResult("User created.");
     }
 
     public List<OperationClaim> GetClaims(User user)
@@ -89,5 +80,26 @@ public class UserManager : IUserService
         return _userDal.Delete(user)
             ? new SuccessResult("Account deleted.")
             : new ErrorResult("Account cannot deleted!");
+    }
+    public IResult UpdateProfile(Guid userId, UserUpdateDto userUpdateDto)
+    {
+        User user = GetById(userId);
+        
+        if (user == null) return new ErrorResult("User not found!");
+        
+        user.FirstName = userUpdateDto.FirstName;
+        user.LastName = userUpdateDto.LastName;
+
+        // foreach (var property in user.GetType().GetProperties())
+        // {
+        //     if (property.GetValue(user) != null)
+        //     {
+        //         property.SetValue(user, property.GetValue(user));
+        //     }
+        // }
+
+        return _userDal.Update(user)
+            ? new SuccessResult("User updated.")
+            : new ErrorResult("User cannot updated!");
     }
 }
