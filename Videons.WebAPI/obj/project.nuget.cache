@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GfPnWLa3Gxa2c4wG5ow3m53PLy82zqTU3YbPQJ0u3Q7qJXKih4F+vTZjHBMkzd/GrZaP8TQGbT6BHfMtYu/3/w==",
+  "dgSpecHash": "dq0s2Zi0hu8yln86epCC+GjVpDrTaGsNPS3An3X4eObkmCxgFINUaXnSgS8XKq8kl4PGrLZuxRCuNQY8j83fIw==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/Videons.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,7 @@
     "/Users/enesdiler/.nuget/packages/autofac.extensions.dependencyinjection/8.0.0/autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
-    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",

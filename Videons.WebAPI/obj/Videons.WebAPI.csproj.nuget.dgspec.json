@@ -225,10 +225,6 @@
               "target": "Package",
               "version": "[34.0.2, )"
             },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.5.1, )"
-            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.2.2, )"
@@ -397,10 +393,6 @@
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.5.1, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",

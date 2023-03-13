@@ -1,7 +1,8 @@
+using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
-using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -70,7 +71,16 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 //add fluent validation
-builder.Services.AddControllersWithViews()
+builder.Services.AddControllers()
+    .AddFluentValidation(options =>
+    {
+        // Validate child properties and root collection elements
+        options.ImplicitlyValidateChildProperties = true;
+        options.ImplicitlyValidateRootCollectionElements = true;
+
+        // Automatic registration of validators in assembly
+        options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+    });
 
 //Dbcontext and connection string
 builder.Services.AddDbContext<VideonsContext>(options =>

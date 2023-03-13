@@ -30,5 +30,7 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
         builder.RegisterType<EfHistoryDal>().As<IHistoryDal>();
+        
+        
     }
 }

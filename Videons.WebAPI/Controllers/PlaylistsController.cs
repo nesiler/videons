@@ -50,6 +50,11 @@ public class PlaylistsController : ControllerBase
     [Authorize]
     public IActionResult Add([FromBody] PlaylistDto playlistDto)
     {
+        if (!ModelState.IsValid)
+        {
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+        }
+        
         var result = _playlistService.Add(playlistDto);
 
         return result.Success

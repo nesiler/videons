@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6eaPKUe62oWvzXZ/Ed2YVN2Zuswv8cQc0wJvxC41EJv0wMnds55xpQ++6SWi+x9uPmgsTgQE2ZxIdJaR5/pjFQ==",
+  "dgSpecHash": "+ixM0ML1r7UZa5ajVxXU2PSCPSTOami2rV1Ka/m2G+7Q8HrsF0ZmIpNuYwez5RUkV5jyU6Vz7mjb5dY0kGEKlA==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.DataAccess/Videons.DataAccess.csproj",
   "expectedPackageFiles": [
     "/Users/enesdiler/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
-    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",

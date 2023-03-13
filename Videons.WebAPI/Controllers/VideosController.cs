@@ -69,6 +69,12 @@ public class VideosController : ControllerBase
     [Authorize]
     public IActionResult Add([FromBody] VideoDto videoDto)
     {
+        
+        if (!ModelState.IsValid)
+        {
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+        }
+        
         var result = _videoService.Add(videoDto);
 
         return result.Success

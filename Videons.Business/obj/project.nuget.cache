@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "t85igYLXZ1H5aCz+/aJCd48pGHkrr/9m9wEGcNX3lTa+demhyBTQ1fJQVluNePAkx7/NMsOHXyrLZ7hdvnggSg==",
+  "dgSpecHash": "oZ4oMhDgS/nncrD4RgaARSN8DD3S4pD5EtW6vugCf9NmcwmF+5iAkO79t/L8D80T2DZEKB4Ewc8riBbyJnIy6Q==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.Business/Videons.Business.csproj",
   "expectedPackageFiles": [
     "/Users/enesdiler/.nuget/packages/autofac/6.5.0/autofac.6.5.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
-    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",

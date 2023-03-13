@@ -60,3 +60,5 @@
 /Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/obj/Debug/net6.0/ref/Videons.WebAPI.dll
 /Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/Bogus.dll
 /Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/FluentValidation.dll
+/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/enesdiler/dev/cs_projects/Videons/Videons.WebAPI/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
