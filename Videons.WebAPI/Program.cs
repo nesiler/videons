@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +15,8 @@ using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
 using Videons.DataAccess.Concrete.EntityFramework;
 
-var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Configuration.Dispose();
@@ -68,6 +68,9 @@ builder.Services.AddSwaggerGen(c =>
 
     c.OperationFilter<AuthorizationOperationFilter>();
 });
+
+//add fluent validation
+builder.Services.AddControllersWithViews()
 
 //Dbcontext and connection string
 builder.Services.AddDbContext<VideonsContext>(options =>

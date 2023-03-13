@@ -12,4 +12,6 @@ public interface ICategoryService
     IResult Add(CategoryCreateUpdateDto categoryDto);
     IResult Update(Guid id, CategoryCreateUpdateDto categoryDto);
     IResult Delete(Guid id);
+
+    IResult AdminRemoveCategory(Guid categoryId);
 }

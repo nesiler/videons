@@ -10,13 +10,13 @@ public class VideoManager : IVideoService
 {
     private readonly IChannelService _channelService;
     private readonly IVideoDal _videoDal;
-    
+
     public VideoManager(IVideoDal videoDal, IChannelService channelService)
     {
         _videoDal = videoDal;
         _channelService = channelService;
     }
-    
+
     public IDataResult<IList<Video>> GetList()
     {
         var videos = _videoDal.GetList();
@@ -91,7 +91,7 @@ public class VideoManager : IVideoService
         {
             ChannelId = channel.Id,
             VideoId = video.Id,
-            Time = (short) new Random().Next(0, 100)
+            Time = (short)new Random().Next(0, 100)
         };
 
         _channelService.Watch(channel.Id, history);
@@ -102,6 +102,16 @@ public class VideoManager : IVideoService
     public IResult Delete(Guid id)
     {
         var video = GetById(id);
+        if (video == null) return new ErrorResult("Video cannot found!");
+
+        return _videoDal.Delete(video)
+            ? new SuccessResult("Video deleted.")
+            : new ErrorResult("Video cannot deleted!");
+    }
+
+    public IResult AdminRemovVideo(Guid videoId)
+    {
+        var video = GetById(videoId);
         if (video == null) return new ErrorResult("Video cannot found!");
 
         return _videoDal.Delete(video)

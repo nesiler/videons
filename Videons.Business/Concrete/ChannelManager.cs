@@ -1,5 +1,4 @@
 using Videons.Business.Abstract;
-using Videons.Core.Entities;
 using Videons.Core.Utilities.Results;
 using Videons.DataAccess.Abstract;
 using Videons.Entities.Concrete;
@@ -27,7 +26,7 @@ public class ChannelManager : IChannelService
 
     public IResult Add(ChannelDto channelDto)
     {
-        if ( _userService.GetById(channelDto.UserId) == null) return new ErrorResult("Invalid user");
+        if (_userService.GetById(channelDto.UserId) == null) return new ErrorResult("Invalid user");
 
         var channel = new Channel
         {
@@ -42,7 +41,7 @@ public class ChannelManager : IChannelService
 
         return new SuccessResult("Channel created.");
     }
-    
+
     public IResult Update(Guid id, ChannelUpdateDto channelUpdateDto)
     {
         var channel = GetById(id);
@@ -63,7 +62,7 @@ public class ChannelManager : IChannelService
     {
         var channel = GetById(id);
         if (channel == null) return new ErrorResult("Channel cannot found!");
-        
+
         channel.Histories.Add(history);
 
         return _channelDal.Update(channel)
@@ -84,29 +83,39 @@ public class ChannelManager : IChannelService
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");
     }
-    
+
     public IResult ChannelRemoveVideo(Guid channelId, Guid videoId)
     {
         var channel = GetById(channelId);
         if (channel == null) return new ErrorResult("Channel cannot found!");
-        
+
         var video = _videoDal.Get(v => v.Id == videoId);
 
-        if(!channel.Videos.Remove(video)) return new ErrorResult("Video cannot removed!");
+        if (!channel.Videos.Remove(video)) return new ErrorResult("Video cannot removed!");
 
         return _channelDal.Update(channel)
             ? new SuccessResult("Channel updated.")
             : new ErrorResult("Channel cannot updated!");
     }
-    
+
 
     public IResult Delete(Guid id)
     {
         var channel = GetById(id);
         if (channel == null) return new ErrorResult("Channel cannot found!");
-        
+
         return _channelDal.Delete(channel)
             ? new SuccessResult("Channel deleted.")
+            : new ErrorResult("Channel cannot deleted!");
+    }
+
+    public IResult AdminRemoveChannel(Guid channelId)
+    {
+        var channel = GetById(channelId);
+        if (channel == null) return new ErrorResult("Channel cannot found!");
+
+        return _channelDal.Delete(channel)
+            ? new SuccessResult("Channel deleted by Admin.")
             : new ErrorResult("Channel cannot deleted!");
     }
 

@@ -14,4 +14,5 @@ public interface IUserService
     IResult ChangePassword(Guid userId, ChangePasswordDto changePasswordDto);
     IResult DeleteAccount(UserForLoginDto userForLoginDto);
     IResult UpdateProfile(Guid userId, UserUpdateDto userUpdateDto);
+    IResult AdminRemoveUser(Guid userId);
 }

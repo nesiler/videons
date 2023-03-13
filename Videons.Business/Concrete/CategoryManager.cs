@@ -75,4 +75,15 @@ public class CategoryManager : ICategoryService
             ? new SuccessResult("Category deleted.")
             : new ErrorResult("Category cannot deleted!");
     }
+
+    public IResult AdminRemoveCategory(Guid categoryId)
+    {
+        var categoryResult = GetById(categoryId);
+        if (!categoryResult.Success) return new ErrorResult(categoryResult.Message);
+
+        var category = categoryResult.Data;
+        return _categoryDal.Delete(category)
+            ? new SuccessResult("Category deleted.")
+            : new ErrorResult("Category cannot deleted!");
+    }
 }

@@ -32,8 +32,8 @@ public class UserManager : IUserService
 
     public IResult Add(User user)
     {
-        if(_userDal.Add(user) == null) return new ErrorResult("User cannot created!");
-        
+        if (_userDal.Add(user) == null) return new ErrorResult("User cannot created!");
+
         var channel = new Channel
         {
             Name = user.FirstName + " " + user.LastName,
@@ -42,7 +42,7 @@ public class UserManager : IUserService
             Verified = false,
             UserId = user.Id
         };
-        if(_channelDal.Add(channel) == null) return new ErrorResult("Channel cannot created!");
+        if (_channelDal.Add(channel) == null) return new ErrorResult("Channel cannot created!");
 
         return new SuccessResult("User created.");
     }
@@ -81,12 +81,13 @@ public class UserManager : IUserService
             ? new SuccessResult("Account deleted.")
             : new ErrorResult("Account cannot deleted!");
     }
+
     public IResult UpdateProfile(Guid userId, UserUpdateDto userUpdateDto)
     {
-        User user = GetById(userId);
-        
+        var user = GetById(userId);
+
         if (user == null) return new ErrorResult("User not found!");
-        
+
         user.FirstName = userUpdateDto.FirstName;
         user.LastName = userUpdateDto.LastName;
 
@@ -101,5 +102,15 @@ public class UserManager : IUserService
         return _userDal.Update(user)
             ? new SuccessResult("User updated.")
             : new ErrorResult("User cannot updated!");
+    }
+
+    public IResult AdminRemoveUser(Guid userId)
+    {
+        var user = GetById(userId);
+        if (user == null) return new ErrorResult("User not found!");
+
+        return _userDal.Delete(user)
+            ? new SuccessResult("Account deleted.")
+            : new ErrorResult("Account cannot deleted!");
     }
 }

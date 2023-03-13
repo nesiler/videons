@@ -1,4 +1,3 @@
-using Videons.Core.Entities;
 using Videons.Core.Utilities.Results;
 using Videons.Entities.Concrete;
 using Videons.Entities.DTOs;
@@ -17,4 +16,6 @@ public interface IChannelService
     IResult ChannelAddVideo(Guid channelId, Guid videoId);
     IResult ChannelRemoveVideo(Guid channelId, Guid videoId);
     IResult Delete(Guid id);
+
+    IResult AdminRemoveChannel(Guid channelId);
 }

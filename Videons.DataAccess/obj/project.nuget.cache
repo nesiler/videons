@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8mkLyMDvzG3n0xUUArjpkDGQnN+ULpCp2zOvLTdTJ12EIA6a3FHULBQTgLW3y86Gi/UhNw/C93A6SfpseQPi/g==",
+  "dgSpecHash": "6eaPKUe62oWvzXZ/Ed2YVN2Zuswv8cQc0wJvxC41EJv0wMnds55xpQ++6SWi+x9uPmgsTgQE2ZxIdJaR5/pjFQ==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.DataAccess/Videons.DataAccess.csproj",
   "expectedPackageFiles": [
+    "/Users/enesdiler/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/identitymodel/6.1.0-preview.2/identitymodel.6.1.0-preview.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.14/microsoft.aspnetcore.authentication.jwtbearer.6.0.14.nupkg.sha512",

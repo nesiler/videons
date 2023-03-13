@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "rf1ouhXAqQ3JFeA6swfPPw5eQ8rwXy510KRSnEUfmAeJbb+LjqF/fYHIm/VkEHH4d70u51QIf7bYN00frruTmw==",
+  "dgSpecHash": "t85igYLXZ1H5aCz+/aJCd48pGHkrr/9m9wEGcNX3lTa+demhyBTQ1fJQVluNePAkx7/NMsOHXyrLZ7hdvnggSg==",
   "success": true,
   "projectFilePath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.Business/Videons.Business.csproj",
   "expectedPackageFiles": [
     "/Users/enesdiler/.nuget/packages/autofac/6.5.0/autofac.6.5.0.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/bogus/34.0.2/bogus.34.0.2.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "/Users/enesdiler/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/identitymodel/6.1.0-preview.2/identitymodel.6.1.0-preview.2.nupkg.sha512",
     "/Users/enesdiler/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.14/microsoft.aspnetcore.authentication.jwtbearer.6.0.14.nupkg.sha512",

@@ -34,7 +34,7 @@ public class VideosController : ControllerBase
             ? Ok(result.Data)
             : BadRequest(result.Message);
     }
-    
+
     [HttpGet("channel/{id}")]
     public IActionResult GetListByChannelId(Guid id)
     {
@@ -44,7 +44,7 @@ public class VideosController : ControllerBase
             ? Ok(result.Data)
             : BadRequest(result.Message);
     }
-    
+
     [HttpGet("category/{id}")]
     public IActionResult GetListByCategoryId(Guid id)
     {
@@ -75,7 +75,7 @@ public class VideosController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
+
     [HttpPost("channel/{id}/video/{videoId}")]
     [Authorize]
     public IActionResult ChannelAddVideo(Guid id, Guid videoId)
@@ -86,7 +86,7 @@ public class VideosController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
+
     [HttpDelete("channel/{id}/video/{videoId}")]
     [Authorize]
     public IActionResult ChannelDeleteVideo(Guid id, Guid videoId)
@@ -124,7 +124,7 @@ public class VideosController : ControllerBase
             ? Ok(video)
             : NotFound();
     }
-    
+
     [HttpDelete("{id}")]
     [Authorize]
     public IActionResult Delete(Guid id)
@@ -135,5 +135,14 @@ public class VideosController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
+
+    [HttpDelete("admin-remove-video/{id}")]
+    public IActionResult AdminRemoveVideo(Guid id)
+    {
+        var result = _videoService.AdminRemovVideo(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
 }

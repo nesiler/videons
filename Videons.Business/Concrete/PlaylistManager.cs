@@ -73,23 +73,34 @@ public class PlaylistManager : IPlaylistService
     {
         var playlist = GetById(playlistId);
         if (playlist == null) return new ErrorResult("Playlist cannot found!");
-        
+
         var video = _videoDal.Get(v => v.Id == videoId);
         if (video == null) return new ErrorResult("Video cannot found!");
-        
+
         var playlistVideo = new PlaylistVideo
         {
             PlaylistId = playlistId,
             VideoId = videoId
         };
-        
+
         return _playlistDal.AddVideoToPlaylist(playlistVideo)
             ? new SuccessResult("Video added to playlist.")
             : new ErrorResult("Video cannot added to playlist!");
     }
+
     public IResult Delete(Guid id)
     {
         var playlist = GetById(id);
+        if (playlist == null) return new ErrorResult("Playlist cannot found!");
+
+        return _playlistDal.Delete(playlist)
+            ? new SuccessResult("Playlist deleted.")
+            : new ErrorResult("Palylsit cannot deleted!");
+    }
+
+    public IResult AdminRemovePlaylist(Guid playlistId)
+    {
+        var playlist = GetById(playlistId);
         if (playlist == null) return new ErrorResult("Playlist cannot found!");
 
         return _playlistDal.Delete(playlist)

@@ -6,40 +6,70 @@
     <projectFile profileName="Videons.DataAccess">Videons.DataAccess/Videons.DataAccess.csproj</projectFile>
     <projectFile profileName="Videons.Entities">Videons.Entities/Videons.Entities.csproj</projectFile>
     <projectFile profileName="Videons.WebAPI">Videons.WebAPI/Videons.WebAPI.csproj</projectFile>
+    <projectFile pubXmlPath="Videons.WebAPI/Properties/PublishProfiles/FolderProfile.pubxml">Videons.WebAPI/Videons.WebAPI.csproj</projectFile>
+    <projectFile pubXmlPath="Videons.WebAPI/Properties/PublishProfiles/Videons-WebAPI - Zip Deploy.pubxml">Videons.WebAPI/Videons.WebAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/Validators/PlaylistValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/Validators/UserForLoginValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/Validators/UserValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/Validators/VideoValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/ICategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/ICategoryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IPlaylistService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IPlaylistService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/Abstract/IVideoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Abstract/IVideoService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/CategoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/CategoryManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/UserManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/Concrete/VideoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/Concrete/VideoManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IPlaylistDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Abstract/IPlaylistDal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfPlaylistDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfPlaylistDal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfUserDal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfVideoDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfVideoDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Videons.Business.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Videons.Business.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/Videons.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/Videons.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Core/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.DataAccess/Videons.DataAccess.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/Videons.DataAccess.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Videons.DataAccess.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Videons.DataAccess.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/Channel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Entities/Concrete/PlaylistVideo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Concrete/PlaylistVideo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Entities/DTOs/UserUpdateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/UserUpdateDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/DTOs/ChannelUpdateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/DTOs/ChannelUpdateDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/Videons.Entities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/Videons.Entities.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Videons.Entities.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Videons.Entities.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/CategoriesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/ChannelsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/PlaylistsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/PlaylistsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Controllers/VideosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Controllers/VideosController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/Videons.WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/Videons.WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Videons.WebAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Videons.WebAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +102,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/55789c4a455b1364d984d192db65c8d7a2875a52907c6a20afb9f8b261f440ae/IRegistrationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/560c08b4255546e4805b633dfaa68f7d16c00/_01325/ClaimTypes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56fd41ae6da7f3bcf6b655a582c16a466fe7f5c447703039c769f49e4e72/SavedChangesEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a9742a8525be1eba17ec58d411798ed7d35a5dbd737749d44faf8c49299f96/CoreStrings.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5e71e1a0d437b4746dcd1fd0f55fc64b13f4f7fb25d8b17c3e9eeae62ca3431/AuthenticationServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f2c3a317ee06bc1b0766b94d4e6a045ea25c9a3da49cb9075bcee751250d4/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,6 +115,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a7bcce7fffe43f6a6676924a7bb2520b54c00/_efc3c/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9f3f2539caf1d1d3bc962f51b12a49523c53a6a135dd252df0b23b14b3515df/EntityFrameworkServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1e84bc8f779d85eecedae89fadb5dfa8aec20ca7ee023e593fc63343db49e/MapperConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b314525519f1b27e1c94253a577de2a24832a6aaaacfe82068889f9ae4f0cd/Faker[T].cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bebd253e21dcf766929bfdfd74615bfe46e6e1693b289273dbdb82152893/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c197ef9ddaaf18a22eb72595ceb984d9dc89032fa86e66c26edbb60e476bd/HttpsRedirectionBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c59f301bfbd62484282a3ff6385331c04e958b2034df4e8b961958af596e2862/PropertyBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -99,6 +131,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f561e8541f7742b19e0282d5571a788632000/_165ad/DatabaseGeneratedOption.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f76d8f68e3c63f4d49bd8e34c2f0a7fb806daaf05d5720c68659bf266b3f4/Int16.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9b332439474fbff79649d69152eacac216c62686568150bd1f6ed15f9759/AuthorizationMiddlewareResultHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fe2f12f3e68e67de84733fecd21594c6ce7cce62332ffc3ab5c28d4deb98ea4c/DbContextServices.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../BookStore/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/ICategoryService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Videons.Business/Abstract/IChannelService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -138,30 +171,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.375",
-    "full.screen.before.presentation.mode": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "settings.editor.splitter.proportion": "0.15566365",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.37456447&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Functions&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.15566365&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Markdown"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;
     ],
-    "rider.external.source.directories": [
-      "/Users/enesdiler/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/Users/enesdiler/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/Users/enesdiler/.local/share/Symbols/src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/enesdiler/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/enesdiler/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/enesdiler/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Videons.WebAPI">
+    <configuration name="Videons.WebAPI: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
+      <riderPublish configuration="Release" platform="AnyCPU" publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/Videons.WebAPI/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="-5662971520827372230" uuid_low="-7918728930281465216" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Videons.WebAPI: Videons-WebAPI - Zip Deploy" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
+      <riderPublish configuration="Release" platform="Any CPU" publish_profile="Videons-WebAPI - Zip Deploy.pubxml" pubxml_path="$PROJECT_DIR$/Videons.WebAPI/Properties/PublishProfiles/Videons-WebAPI - Zip Deploy.pubxml" uuid_high="-5662971520827372230" uuid_low="-7918728930281465216" />
+      <method v="2" />
+    </configuration>
     <configuration name="Videons.WebAPI" type="LaunchSettings" factoryName=".NET Launch Settings Profile" singleton="false">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Videons.WebAPI/Videons.WebAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -209,6 +250,15 @@
       <workItem from="1678120832246" duration="15645000" />
       <workItem from="1678234301225" duration="5886000" />
       <workItem from="1678246338328" duration="32086000" />
+      <workItem from="1678338409297" duration="941000" />
+      <workItem from="1678340968655" duration="312000" />
+      <workItem from="1678341318323" duration="293000" />
+      <workItem from="1678341661040" duration="902000" />
+      <workItem from="1678358723911" duration="2979000" />
+      <workItem from="1678361729074" duration="125000" />
+      <workItem from="1678370395948" duration="815000" />
+      <workItem from="1678566598058" duration="19583000" />
+      <workItem from="1678706482614" duration="5568000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1677097172285</created>
@@ -246,41 +296,41 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
-          <line>66</line>
+          <line>65</line>
           <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" initialLine="66" containingFunctionPresentation="method 'Watch'">
             <startOffsets>
-              <option value="2138" />
+              <option value="2096" />
             </startOffsets>
             <endOffsets>
-              <option value="2169" />
+              <option value="2127" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
-          <line>64</line>
+          <line>63</line>
           <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" initialLine="64" containingFunctionPresentation="method 'Watch'">
             <startOffsets>
-              <option value="2051" />
-              <option value="2072" />
+              <option value="2017" />
+              <option value="2038" />
             </startOffsets>
             <endOffsets>
-              <option value="2071" />
-              <option value="2120" />
+              <option value="2037" />
+              <option value="2086" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs</url>
-          <line>68</line>
+          <line>67</line>
           <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/ChannelManager.cs" initialLine="68" containingFunctionPresentation="method 'Watch'">
             <startOffsets>
-              <option value="2179" />
+              <option value="2137" />
             </startOffsets>
             <endOffsets>
-              <option value="2323" />
+              <option value="2281" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
@@ -305,12 +355,12 @@
           <line>77</line>
           <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" initialLine="77" containingFunctionPresentation="method 'AddVideo'">
             <startOffsets>
-              <option value="2531" />
-              <option value="2550" />
+              <option value="2523" />
+              <option value="2542" />
             </startOffsets>
             <endOffsets>
-              <option value="2549" />
-              <option value="2596" />
+              <option value="2541" />
+              <option value="2588" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="23" />
@@ -320,10 +370,10 @@
           <line>85</line>
           <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" initialLine="85" containingFunctionPresentation="method 'AddVideo'">
             <startOffsets>
-              <option value="2757" />
+              <option value="2733" />
             </startOffsets>
             <endOffsets>
-              <option value="2936" />
+              <option value="2912" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
@@ -353,6 +403,242 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>207</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="207" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="8474" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8520" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>209</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="209" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="8549" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8575" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>210</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="210" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="8591" />
+              <option value="8631" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8630" />
+              <option value="8640" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>211</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="211" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="8656" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8691" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>212</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="212" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="8707" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8747" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>213</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="213" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="8763" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8829" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
+          <line>218</line>
+          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs" initialLine="218" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="9057" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9083" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>597</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="597" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31301" />
+            </startOffsets>
+            <endOffsets>
+              <option value="31317" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>599</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="599" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31331" />
+            </startOffsets>
+            <endOffsets>
+              <option value="31414" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>601</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="601" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31428" />
+            </startOffsets>
+            <endOffsets>
+              <option value="31514" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>603</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="603" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31528" />
+            </startOffsets>
+            <endOffsets>
+              <option value="31547" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>605</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="605" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31561" />
+            </startOffsets>
+            <endOffsets>
+              <option value="32759" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>607</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="607" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31595" />
+            </startOffsets>
+            <endOffsets>
+              <option value="31788" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>611</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="611" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="31806" />
+            </startOffsets>
+            <endOffsets>
+              <option value="31896" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>631</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="631" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="32619" />
+            </startOffsets>
+            <endOffsets>
+              <option value="32721" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>621</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="621" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="32219" />
+            </startOffsets>
+            <endOffsets>
+              <option value="32302" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>623</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="623" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="32320" />
+            </startOffsets>
+            <endOffsets>
+              <option value="32422" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs</url>
+          <line>619</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" initialLine="619" containingFunctionPresentation="method 'SaveChanges'">
+            <startOffsets>
+              <option value="32139" />
+            </startOffsets>
+            <endOffsets>
+              <option value="32201" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

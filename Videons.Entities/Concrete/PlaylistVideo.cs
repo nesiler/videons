@@ -1,5 +1,3 @@
-using Videons.Core.Entities;
-
 namespace Videons.Entities.Concrete;
 
 public class PlaylistVideo

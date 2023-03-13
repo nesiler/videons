@@ -61,6 +61,8 @@ public class PlaylistsController : ControllerBase
     [Authorize]
     public IActionResult Update(Guid id, PlaylistUpdateDto playlistUpdateDto)
     {
+        if (playlistUpdateDto.Name == string.Empty) return BadRequest("Channel name cannot be null");
+
         var result = _playlistService.Update(id, playlistUpdateDto);
 
         return result.Success
@@ -79,6 +81,16 @@ public class PlaylistsController : ControllerBase
             : BadRequest(result.Message);
     }
 
+    [HttpDelete("admin-remove-playlist/{id}")]
+    public IActionResult AdminRemovePlaylist(Guid id)
+    {
+        var result = _playlistService.AdminRemovePlaylist(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+
     [HttpPost("{id}/videos/{videoId}")]
     [Authorize]
     public IActionResult AddVideo(Guid id, Guid videoId)
@@ -88,6 +100,5 @@ public class PlaylistsController : ControllerBase
         return result.Success
             ? Ok(result.Message)
             : BadRequest(result.Message);
-
     }
 }

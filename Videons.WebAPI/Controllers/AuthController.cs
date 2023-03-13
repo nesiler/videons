@@ -3,6 +3,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Videons.Business.Abstract;
+using Videons.Core.Utilities.Results;
 using Videons.Entities.DTOs;
 
 namespace Videons.WebAPI.Controllers;
@@ -65,12 +66,15 @@ public class AuthController : ControllerBase
         var currentUser = HttpContext.User;
         var userId = new Guid(currentUser.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty);
 
+        if (changePasswordDto.NewPassword == string.Empty)
+            return BadRequest(new ErrorResult("New password cannot be empty"));
+
         var result = _userService.ChangePassword(userId, changePasswordDto);
         return result.Success
             ? Ok(result)
             : BadRequest(result);
     }
-    
+
     [HttpPut("update-profile")]
     [Authorize]
     public IActionResult UpdateProfile([FromBody] UserUpdateDto userUpdateDto)
@@ -89,6 +93,15 @@ public class AuthController : ControllerBase
     public IActionResult DeleteAccount([FromBody] UserForLoginDto userForLoginDto)
     {
         var result = _userService.DeleteAccount(userForLoginDto);
+        return result.Success
+            ? Ok(result)
+            : BadRequest(result);
+    }
+
+    [HttpDelete("admin-remove-user/{userId}")]
+    public IActionResult AdminRemoveUser(Guid userId)
+    {
+        var result = _userService.AdminRemoveUser(userId);
         return result.Success
             ? Ok(result)
             : BadRequest(result);

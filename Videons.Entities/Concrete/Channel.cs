@@ -8,7 +8,7 @@ public class Channel : EntityBase
     public virtual User User { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public string Slug { get; set; }
+    public string? Slug { get; set; }
     public string ImagePath { get; set; } = "";
     public bool Verified { get; set; } = false;
     public ICollection<Video> Videos { get; set; } = new HashSet<Video>();

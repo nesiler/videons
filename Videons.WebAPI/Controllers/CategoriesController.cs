@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Videons.Business.Abstract;
 using Videons.Entities.DTOs;
@@ -25,7 +24,7 @@ public class CategoriesController : ControllerBase
             ? Ok(result.Data)
             : BadRequest(result.Message);
     }
-    
+
     [HttpGet("id/{id}")]
     public IActionResult GetById(Guid id)
     {
@@ -35,7 +34,7 @@ public class CategoriesController : ControllerBase
             ? Ok(result.Data)
             : BadRequest(result.Message);
     }
-    
+
     [HttpGet("name/{name}")]
     public IActionResult GetById(string name)
     {
@@ -67,11 +66,21 @@ public class CategoriesController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
+
     [HttpDelete("{id}")]
     public IActionResult Delete(Guid id)
     {
         var result = _categoryService.Delete(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
+
+    [HttpDelete("admin-remove/{categoryId}")]
+    public IActionResult AdminRemoveCategory(Guid categoryId)
+    {
+        var result = _categoryService.AdminRemoveCategory(categoryId);
 
         return result.Success
             ? Ok(result.Message)

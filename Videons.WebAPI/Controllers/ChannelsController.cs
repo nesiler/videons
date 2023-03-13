@@ -35,7 +35,7 @@ public class ChannelsController : ControllerBase
             ? Ok(channel)
             : NotFound();
     }
-    
+
     [HttpGet("user/{userId}")]
     public IActionResult GetByUserId(Guid userId)
     {
@@ -45,7 +45,7 @@ public class ChannelsController : ControllerBase
             ? Ok(channel)
             : NotFound();
     }
-    
+
     [HttpGet("email/{email}")]
     public IActionResult GetByUserEmail([FromBody] string email)
     {
@@ -60,8 +60,9 @@ public class ChannelsController : ControllerBase
     [Authorize]
     public IActionResult Add([FromBody] ChannelDto channelDto)
     {
-        var result = _channelService.Add(channelDto);
+        if (channelDto.Name == string.Empty) return BadRequest("Channel name cannot be null");
 
+        var result = _channelService.Add(channelDto);
         return result.Success
             ? Ok(result.Message)
             : BadRequest(result.Message);
@@ -71,14 +72,16 @@ public class ChannelsController : ControllerBase
     [Authorize]
     public IActionResult Update(Guid id, ChannelUpdateDto channelUpdateDto)
     {
+        if (channelUpdateDto.Name == string.Empty) return BadRequest("Channel name cannot be null");
+
         var result = _channelService.Update(id, channelUpdateDto);
 
         return result.Success
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
-    
+
+
     [HttpDelete("delete-channel/{id}")]
     [Authorize]
     public IActionResult Delete(Guid id)
@@ -89,6 +92,14 @@ public class ChannelsController : ControllerBase
             ? Ok(result.Message)
             : BadRequest(result.Message);
     }
-    
-    
+
+    [HttpDelete("admin-remove-channel/{id}")]
+    public IActionResult AdminRemoveChannel(Guid id)
+    {
+        var result = _channelService.AdminRemoveChannel(id);
+
+        return result.Success
+            ? Ok(result.Message)
+            : BadRequest(result.Message);
+    }
 }

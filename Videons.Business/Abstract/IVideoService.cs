@@ -14,4 +14,5 @@ public interface IVideoService
     IResult Update(Guid id, VideoUpdateDto videoUpdateDto);
     Video Watch(Guid videoId, Guid channelId);
     IResult Delete(Guid id);
+    IResult AdminRemovVideo(Guid videoId);
 }
