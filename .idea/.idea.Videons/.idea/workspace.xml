@@ -10,7 +10,13 @@
     <projectFile pubXmlPath="Videons.WebAPI/Properties/PublishProfiles/Videons-WebAPI - Zip Deploy.pubxml">Videons.WebAPI/Videons.WebAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="" />
+    <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Business/obj/Debug/net6.0/Videons.Business.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.DataAccess/obj/Debug/net6.0/Videons.DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.Entities/obj/Debug/net6.0/Videons.Entities.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Videons.WebAPI/obj/Debug/net6.0/Videons.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,6 +206,8 @@
       <workItem from="1678706482614" duration="6181000" />
       <workItem from="1678714395228" duration="585000" />
       <workItem from="1678751075166" duration="598000" />
+      <workItem from="1678946293871" duration="730000" />
+      <workItem from="1679233315419" duration="1862000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1677097172285</created>
