@@ -10,7 +10,9 @@
     <projectFile pubXmlPath="Videons.WebAPI/Properties/PublishProfiles/Videons-WebAPI - Zip Deploy.pubxml">Videons.WebAPI/Videons.WebAPI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="" />
+    <list default="true" id="0cf874c0-904e-4ddd-a3b5-5961d89379a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Videons/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,6 +202,8 @@
       <workItem from="1678706482614" duration="6181000" />
       <workItem from="1678714395228" duration="585000" />
       <workItem from="1678751075166" duration="598000" />
+      <workItem from="1678946293871" duration="730000" />
+      <workItem from="1679312122540" duration="1893000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1677097172285</created>
@@ -275,75 +279,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs</url>
-          <line>74</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" initialLine="74" containingFunctionPresentation="method 'AddVideo'">
-            <startOffsets>
-              <option value="2385" />
-              <option value="2407" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2406" />
-              <option value="2456" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs</url>
-          <line>77</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" initialLine="77" containingFunctionPresentation="method 'AddVideo'">
-            <startOffsets>
-              <option value="2523" />
-              <option value="2542" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2541" />
-              <option value="2588" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs</url>
-          <line>85</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.Business/Concrete/PlaylistManager.cs" initialLine="85" containingFunctionPresentation="method 'AddVideo'">
-            <startOffsets>
-              <option value="2733" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2912" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfPlaylistDal.cs</url>
-          <line>17</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfPlaylistDal.cs" initialLine="17" containingFunctionPresentation="method 'AddVideoToPlaylist'">
-            <startOffsets>
-              <option value="562" />
-            </startOffsets>
-            <endOffsets>
-              <option value="595" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfPlaylistDal.cs</url>
-          <line>15</line>
-          <properties documentPath="$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/EfPlaylistDal.cs" initialLine="15" containingFunctionPresentation="method 'AddVideoToPlaylist'">
-            <startOffsets>
-              <option value="459" />
-            </startOffsets>
-            <endOffsets>
-              <option value="506" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Videons.DataAccess/Concrete/EntityFramework/VideonsContext.cs</url>
