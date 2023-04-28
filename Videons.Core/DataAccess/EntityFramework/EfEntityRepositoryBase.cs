@@ -55,4 +55,37 @@ public abstract class EfEntityRepositoryBase<TEntity, TContext> : IEntityReposit
 
         return Context.SaveChanges() > 0;
     }
+    
+    public bool Delete(Expression<Func<TEntity, bool>> filter)
+    {
+        var entity = Get(filter);
+
+        if (entity == null)
+        {
+            return false;
+        }
+
+        var entry = Context.Entry(entity);
+
+        entry.State = EntityState.Deleted;
+
+        return Context.SaveChanges() > 0;
+    }
+    
+    public bool Delete(Guid id)
+    {
+        var entity = Get(x => x.Id == id);
+
+        if (entity == null)
+        {
+            return false;
+        }
+
+        var entry = Context.Entry(entity);
+
+        entry.State = EntityState.Deleted;
+
+        return Context.SaveChanges() > 0;
+    }
+    
 }
