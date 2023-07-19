@@ -1,11 +1,7 @@
-using System.Security.Claims;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Videons.Business.Abstract;
 using Videons.Core.Utilities.Results;
 using Videons.Entities.DTOs;
-
 
 namespace Videons.WebAPI.Controllers;
 
@@ -27,12 +23,8 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public IActionResult Register([FromBody] UserForRegisterDto userForRegisterDto)
     {
-        
-        if (!ModelState.IsValid)
-        {
-            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
-        }
-        
+        if (!ModelState.IsValid) return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+
         var userExistResult = _authService.UserExists(userForRegisterDto.Email);
         if (userExistResult.Success) return BadRequest(userExistResult);
 
@@ -46,11 +38,9 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromBody] UserForLoginDto userForLoginDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
-        }
-        
+        if (!ModelState.IsValid) return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+
+
         var userToLoginResult = _authService.Login(userForLoginDto);
         if (!userToLoginResult.Success) return BadRequest(userToLoginResult.Message);
 

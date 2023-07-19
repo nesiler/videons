@@ -1,11 +1,7 @@
-using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
@@ -15,7 +11,6 @@ using Videons.Business.DependencyResolvers.Autofac;
 using Videons.Core.Utilities.Security.Encryption;
 using Videons.Core.Utilities.Security.Jwt;
 using Videons.DataAccess.Concrete.EntityFramework;
-
 
 var builder = WebApplication.CreateBuilder(args);
 

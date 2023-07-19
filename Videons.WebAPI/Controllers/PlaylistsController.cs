@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Videons.Business.Abstract;
 using Videons.Entities.DTOs;
 
@@ -50,11 +48,8 @@ public class PlaylistsController : ControllerBase
     [Authorize]
     public IActionResult Add([FromBody] PlaylistDto playlistDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
-        }
-        
+        if (!ModelState.IsValid) return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+
         var result = _playlistService.Add(playlistDto);
 
         return result.Success

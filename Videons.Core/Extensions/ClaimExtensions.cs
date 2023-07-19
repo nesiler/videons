@@ -1,5 +1,4 @@
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 
 namespace Videons.Core.Extensions;
 
@@ -13,6 +12,11 @@ public static class ClaimExtensions
     public static void AddName(this ICollection<Claim> claims, string name)
     {
         claims.Add(new Claim(ClaimTypes.Name, name));
+    }
+
+    public static void AddSurname(this ICollection<Claim> claims, string surname)
+    {
+        claims.Add(new Claim(ClaimTypes.Surname, surname));
     }
 
     public static void AddNameIdentifier(this ICollection<Claim> claims, string nameIdentifier)

@@ -52,7 +52,6 @@ public class AuthManager : IAuthService
     public IResult UserExists(string email)
     {
         if (_userService.GetByEmail(email) != null) return new SuccessResult("Already exist");
-
         return new ErrorResult();
     }
 

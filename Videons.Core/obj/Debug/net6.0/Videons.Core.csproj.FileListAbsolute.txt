@@ -12,3 +12,17 @@
 /Users/enesdiler/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.pdb
 /Users/enesdiler/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.genruntimeconfig.cache
 /Users/enesdiler/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/ref/Videons.Core.dll
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/bin/Debug/net6.0/Videons.Core.deps.json
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/bin/Debug/net6.0/Videons.Core.runtimeconfig.json
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/bin/Debug/net6.0/Videons.Core.dll
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/bin/Debug/net6.0/Videons.Core.pdb
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.AssemblyReference.cache
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.AssemblyInfoInputs.cache
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.AssemblyInfo.cs
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.csproj.CoreCompileInputs.cache
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.dll
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/refint/Videons.Core.dll
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.pdb
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/Videons.Core.genruntimeconfig.cache
+/Users/jerry/dev/cs_projects/Videons/Videons.Core/obj/Debug/net6.0/ref/Videons.Core.dll

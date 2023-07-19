@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Videons.Core
-build_property.ProjectDir = /Users/enesdiler/dev/cs_projects/Videons/Videons.Core/
+build_property.ProjectDir = /Users/jerry/dev/basic/cs/Videons/Videons.Core/

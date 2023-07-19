@@ -1968,19 +1968,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/enesdiler/.nuget/packages/": {}
+    "/Users/jerry/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/enesdiler/dev/cs_projects/Videons/Videons.Business/Videons.Business.csproj",
+      "projectUniqueName": "/Users/jerry/dev/basic/cs/Videons/Videons.Business/Videons.Business.csproj",
       "projectName": "Videons.Business",
-      "projectPath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.Business/Videons.Business.csproj",
-      "packagesPath": "/Users/enesdiler/.nuget/packages/",
-      "outputPath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.Business/obj/",
+      "projectPath": "/Users/jerry/dev/basic/cs/Videons/Videons.Business/Videons.Business.csproj",
+      "packagesPath": "/Users/jerry/.nuget/packages/",
+      "outputPath": "/Users/jerry/dev/basic/cs/Videons/Videons.Business/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/enesdiler/.nuget/NuGet/NuGet.Config"
+        "/Users/jerry/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1993,11 +1993,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/enesdiler/dev/cs_projects/Videons/Videons.DataAccess/Videons.DataAccess.csproj": {
-              "projectPath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.DataAccess/Videons.DataAccess.csproj"
+            "/Users/jerry/dev/basic/cs/Videons/Videons.DataAccess/Videons.DataAccess.csproj": {
+              "projectPath": "/Users/jerry/dev/basic/cs/Videons/Videons.DataAccess/Videons.DataAccess.csproj"
             },
-            "/Users/enesdiler/dev/cs_projects/Videons/Videons.Entities/Videons.Entities.csproj": {
-              "projectPath": "/Users/enesdiler/dev/cs_projects/Videons/Videons.Entities/Videons.Entities.csproj"
+            "/Users/jerry/dev/basic/cs/Videons/Videons.Entities/Videons.Entities.csproj": {
+              "projectPath": "/Users/jerry/dev/basic/cs/Videons/Videons.Entities/Videons.Entities.csproj"
             }
           }
         }
@@ -2046,12 +2046,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.19, 6.0.19]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.19, 6.0.19]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
       }
     }
   }

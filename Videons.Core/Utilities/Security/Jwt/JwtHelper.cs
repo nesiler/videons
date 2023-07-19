@@ -1,10 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Videons.Core.Entities;
 using Videons.Core.Entities.Concrete;
-using Videons.Core.Extensions;
 using Videons.Core.Utilities.Security.Encryption;
 
 namespace Videons.Core.Utilities.Security.Jwt;
